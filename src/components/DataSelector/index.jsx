@@ -5,7 +5,7 @@ const DataSelector = () => {
   return (
     <div className="dataSelector">
       <button type="radio" value="Report">
-        Report
+        Reporttt
       </button>
       <button type="radio" value="Company">
         Company
