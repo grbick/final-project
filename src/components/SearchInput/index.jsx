@@ -1,10 +1,13 @@
-import React from 'react'
-import './searchInput.scss'
+import React from "react";
+import "./searchInput.scss";
 
 const SearchInput = () => {
   return (
-    <div className='searchInput'>SearchInput</div>
-  )
-}
+    <div className="searchInput">
+      SearchInput
+      <input type="input" placeholder="search something... "></input>
+    </div>
+  );
+};
 
-export default SearchInput
+export default SearchInput;

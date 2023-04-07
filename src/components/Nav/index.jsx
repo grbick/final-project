@@ -1,10 +1,15 @@
-import React from 'react'
-import './nav.scss'
+import React from "react";
+import "./nav.scss";
+import DataSelector from "../DataSelector";
+import Add from "../Add";
 
 const Nav = () => {
   return (
-    <div className='nav'>Nav</div>
-  )
-}
+    <div className="nav">
+      <DataSelector />
+      <Add />
+    </div>
+  );
+};
 
-export default Nav
+export default Nav;

@@ -1,11 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import './App.css'
+import React, { useEffect, useState } from "react";
+import "./App.css";
 import { ApplicationProvider } from "./context";
+import Header from "./components/Header/index";
+import Footer from "./components/Footer/index";
+import WizButton from "./components/WizButton";
+import AdminPage from "./pages/AdminPage";
 
 const App = () => {
   return (
-    <div className='app'>App</div>
-  )
-}
+    <div className="app">
+      <Header />
+      <Footer />
+      <WizButton />
+      <AdminPage />
+    </div>
+  );
+};
 
-export default App
+export default App;

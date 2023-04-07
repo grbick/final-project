@@ -1,10 +1,18 @@
-import React from 'react'
-import './reportsWrap.scss'
+import React from "react";
+import "./reportsWrap.scss";
 
 const ReportsWrap = () => {
   return (
-    <div className='reportsWrap'>ReportsWrap</div>
-  )
-}
+    <div className="reportsWrap">
+      <p>Company:</p>
+      <p>Candidate:</p>
+      <p>Date:</p>
+      <p>Phase:</p>
+      <p>Status:</p>
+      <p>LogoModal</p>
+      <p>Remove:</p>
+    </div>
+  );
+};
 
-export default ReportsWrap
+export default ReportsWrap;

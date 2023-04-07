@@ -1,10 +1,12 @@
-import React from 'react'
-import './hireButton.scss'
+import React from "react";
+import "./hireButton.scss";
 
 const HireButton = () => {
   return (
-    <div className='hireButton'>HireButton</div>
-  )
-}
+    <div className="hireButton">
+      <button type="button">Hire Button</button>
+    </div>
+  );
+};
 
-export default HireButton
+export default HireButton;

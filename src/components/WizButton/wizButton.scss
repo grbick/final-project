@@ -1,0 +1,15 @@
+.wizButton {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    padding-top: 15px;
+}
+
+.wizButton > .nextButton {
+    height: 15px;
+}
+.wizButton > .backButton {
+    height: 15px;
+}
