@@ -1,10 +1,13 @@
-import React from 'react'
-import './companiesWrap.scss'
+import React from "react";
+import "./companiesWrap.scss";
 
 const CompaniesWrap = () => {
   return (
-    <div className='companiesWrap'>CompaniesWrap</div>
-  )
-}
+    <div className="companiesWrap">
+      <span className="compSpan">Company Name:</span>
+      <span className="emailSpan">Company e-mail:</span>
+    </div>
+  );
+};
 
-export default CompaniesWrap
+export default CompaniesWrap;

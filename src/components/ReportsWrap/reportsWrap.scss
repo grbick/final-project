@@ -3,11 +3,13 @@
     height: 50px;
     background-color: gray;
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
-.reportsWrap > p {
+.reportsWrap > span {
     border: 1px solid black;
     display: inline;
-    // padding: 5px;
+    margin-right: 40px;
 
 
 }

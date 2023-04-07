@@ -7,14 +7,7 @@ import WizButton from "./components/WizButton";
 import AdminPage from "./pages/AdminPage";
 
 const App = () => {
-  return (
-    <div className="app">
-      <Header />
-      <Footer />
-      <WizButton />
-      <AdminPage />
-    </div>
-  );
+  return <div className="app"></div>;
 };
 
 export default App;

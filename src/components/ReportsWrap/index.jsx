@@ -4,13 +4,13 @@ import "./reportsWrap.scss";
 const ReportsWrap = () => {
   return (
     <div className="reportsWrap">
-      <p>Company:</p>
-      <p>Candidate:</p>
-      <p>Date:</p>
-      <p>Phase:</p>
-      <p>Status:</p>
-      <p>LogoModal</p>
-      <p>Remove:</p>
+      <span>Company:</span>
+      <span>Candidate:</span>
+      <span>Date:</span>
+      <span>Phase:</span>
+      <span>Status:</span>
+      <span>LogoModal</span>
+      <span>Remove:</span>
     </div>
   );
 };

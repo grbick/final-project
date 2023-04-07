@@ -2,6 +2,7 @@ import React from "react";
 import "./adminMain.scss";
 import Nav from "../Nav";
 import ReportsWrap from "../ReportsWrap";
+import CompaniesWrap from "../CompaniesWrap";
 
 const AdminMain = () => {
   return (
@@ -9,6 +10,7 @@ const AdminMain = () => {
       AdminMain
       <Nav />
       <ReportsWrap />
+      <CompaniesWrap />
     </div>
   );
 };
