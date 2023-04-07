@@ -1,5 +1,7 @@
 import React from "react";
 import "./reportsWrap.scss";
+import RemoveItem from "../RemoveItem";
+import NotesButton from "../NotesButton";
 
 const ReportsWrap = () => {
   return (
@@ -9,8 +11,8 @@ const ReportsWrap = () => {
       <span>Date:</span>
       <span>Phase:</span>
       <span>Status:</span>
-      <span>LogoModal</span>
-      <span>Remove:</span>
+      <NotesButton />
+      <RemoveItem />
     </div>
   );
 };

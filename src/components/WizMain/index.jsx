@@ -1,10 +1,15 @@
-import React from 'react'
-import './wizMain.scss'
+import React from "react";
+import "./wizMain.scss";
+import WizPhase from "../WizPhase";
+import WizWrap from "../WizWrap";
 
 const WizMain = () => {
   return (
-    <div className='wizMain'>WizMain</div>
-  )
-}
+    <div className="wizMain">
+      <WizPhase />
+      <WizWrap />
+    </div>
+  );
+};
 
-export default WizMain
+export default WizMain;

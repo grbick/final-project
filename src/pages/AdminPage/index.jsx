@@ -9,8 +9,8 @@ const AdminPage = () => {
     <div className="adminPage">
       AdminPage
       <Header />
-      <Footer />
       <AdminMain />
+      <Footer />
     </div>
   );
 };
