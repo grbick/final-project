@@ -1,0 +1,28 @@
+.logInPage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  & > div {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  & button{
+    margin: 0 auto;
+    width: fit-content;
+    display: inline;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+  & input{
+    border: 1px solid black;
+    padding: 2px;
+  }
+}
+

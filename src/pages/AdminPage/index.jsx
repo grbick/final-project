@@ -1,10 +1,25 @@
-import React from 'react'
-import './adminPage'
+import React, { useEffect, useRef, useState } from "react";
+import "./adminPage.scss";
+import DataSelector from "../../components/DataSelector";
+import ReportsWrap from "../../components/ReportsWrap";
+import CompaniesWrap from "../../components/CompaniesWrap";
+import CandidatesWrap from "../../components/CandidatesWrap";
 
 const AdminPage = () => {
-  return (
-    <div className='adminPage'>AdminPage</div>
-  )
-}
+  const [data, setData] = useState("reports");
 
-export default AdminPage
+  return (
+    <div className="adminPage">
+      <DataSelector data={data} setData={setData} />
+      {data === "reports" ? (
+        <ReportsWrap />
+      ) : data === "companies" ? (
+        <CompaniesWrap />
+      ) : (
+        <CandidatesWrap />
+      )}
+    </div>
+  );
+};
+
+export default AdminPage;
