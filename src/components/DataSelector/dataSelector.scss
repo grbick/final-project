@@ -1,3 +1,9 @@
-.dataSelector > button{
-    border: 1px solid black;
+.dataSelector{
+    & > span{
+        border: 1px solid black;
+        padding: 2px;
+    }
+}
+.selected{
+    background-color: beige;
 }
