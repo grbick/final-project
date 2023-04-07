@@ -1,10 +1,12 @@
-import React from 'react'
-import './logOutButton'
+import React from "react";
+import "./logOutButton.scss";
 
 const LogOutButton = () => {
   return (
-    <div className='logOutButton'>LogOutButton</div>
-  )
-}
+    <div className="logOutButton">
+      <button type="button">LogOutButton</button>
+    </div>
+  );
+};
 
-export default LogOutButton
+export default LogOutButton;

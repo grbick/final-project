@@ -1,0 +1,15 @@
+.reportsWrap {
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.reportsWrap > span {
+    border: 1px solid black;
+    display: inline;
+    margin-right: 40px;
+
+
+}

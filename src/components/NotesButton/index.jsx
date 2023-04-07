@@ -1,10 +1,12 @@
-import React from 'react'
-import './notesButton.scss'
+import React from "react";
+import "./notesButton.scss";
 
 const NotesButton = () => {
   return (
-    <div className='notesButton'>NotesButton</div>
-  )
-}
+    <div className="notesButton">
+      <button type="button">Notes Button</button>
+    </div>
+  );
+};
 
-export default NotesButton
+export default NotesButton;

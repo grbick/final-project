@@ -1,5 +1,5 @@
-import React from 'react'
-import './dataSelector.scss'
+import React from "react";
+import "./dataSelector.scss";
 
 const DataSelector = ({data,setData}) => {
   return (
@@ -11,4 +11,4 @@ const DataSelector = ({data,setData}) => {
   )
 }
 
-export default DataSelector
+export default DataSelector;

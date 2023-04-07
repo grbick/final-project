@@ -1,0 +1,19 @@
+.companiesWrap {
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.companiesWrap > .compSpan{
+    border: 1px solid black;
+
+}
+
+.companiesWrap > .emailSpan{
+    border: 1px solid black;
+    
+    
+}
