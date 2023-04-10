@@ -4,7 +4,8 @@ import { useRef } from "react";
 import { applicationContext } from "../../context";
 
 const LogInPage = () => {
-  const { body,setBody,logIn,setUser,users,failed,setFailed,} = useContext(applicationContext);
+  const { body, setBody, logIn, setUser, users, failed, setFailed } =
+    useContext(applicationContext);
   return (
     <div className="logInPage">
       <div className="hello-div">
@@ -23,9 +24,9 @@ const LogInPage = () => {
               setBody({ ...body, email: e.target.value });
               const user = users.find(
                 (element) => element.email === e.target.value
-              ) ? users.find(
-                (element) => element.email === e.target.value)
-              : '';
+              )
+                ? users.find((element) => element.email === e.target.value)
+                : "";
               sessionStorage.setItem("user", JSON.stringify(user));
               setUser(JSON.parse(sessionStorage.getItem("user")));
             }}
@@ -41,14 +42,14 @@ const LogInPage = () => {
             onInput={(e) => {
               setBody({ ...body, password: e.target.value });
             }}
-            onKeyDown={(e)=>{
-              if(e.key === 'Enter')logIn()
+            onKeyDown={(e) => {
+              if (e.key === "Enter") logIn();
             }}
             value={body.password}
           />
         </label>
         <div className="invalid-input">{failed && <p>Wrong input!</p>}</div>
-        <button onClick={logIn} >Log in</button>
+        <button onClick={logIn}>Log in</button>
       </div>
     </div>
   );

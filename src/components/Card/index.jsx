@@ -3,13 +3,15 @@ import "./card.scss";
 import ProgressBar from "../ProgressBar";
 import InterestingButton from "../InterestingButton";
 
-const Card = () => {
+const Card = (char) => {
+  console.log(123);
+  console.log(char);
   return (
     <div className="card">
-      <img src="" alt="" />
-      <ProgressBar />
       <InterestingButton />
-      <p></p>
+      <img src={char.char.avatar} alt="happy people" />
+      <ProgressBar />
+      <p>{char.char?.name}</p>
     </div>
   );
 };

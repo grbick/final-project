@@ -1,17 +1,17 @@
-import React from 'react'
-import './landingPage.scss'
-import Header from "../components/Header"
-import LandingMain from "../components/LandingMain"
-import Footer from "../components/Footer"
+import React from "react";
+import "./landingPage.scss";
+import Header from "../../components/Header";
+import LandingMain from "../../components/LandingMain";
+import Footer from "../../components/Footer";
 
 const LandingPage = () => {
   return (
-    <div className='landingPage'>
+    <div className="landingPage">
       <Header />
       <LandingMain />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;

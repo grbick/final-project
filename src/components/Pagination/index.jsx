@@ -1,10 +1,8 @@
-import React from 'react'
-import './pagination.scss'
+import React from "react";
+import "./pagination.scss";
 
 const Pagination = () => {
-  return (
-    <div className='pagination'>Pagination</div>
-  )
-}
+  return <div className="pagination">Pagination</div>;
+};
 
-export default Pagination
+export default Pagination;

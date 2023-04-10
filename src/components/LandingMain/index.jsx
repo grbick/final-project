@@ -1,22 +1,20 @@
-import React from 'react'
-import './landingPage.scss'
-import FilterButton from "../FilterButton"
-import SideBarModal from "../SideBarModal"
-import CardWrapper from "../CardWrapper"
-import Pagination from "../Pagination"
+import React from "react";
+import "./landingMain.scss";
+import SideBarModal from "../SideBarModal";
+import CardWrapper from "../CardWrapper";
+import Pagination from "../Pagination";
 
-const LandingPage = () => {
+const LandingMain = () => {
   return (
-    <div className='landingPage'>
-      <div className='titleDiv'>
-        <FilterButton />
+    <div className="landingMain">
+      <div className="titleDiv">
         <h2>Candidates</h2>
       </div>
       <SideBarModal />
       <CardWrapper />
       <Pagination />
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingMain;
