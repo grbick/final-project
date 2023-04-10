@@ -1,10 +1,8 @@
-import React from 'react'
-import './interestingButton.scss'
+import React from "react";
+import "./interestingButton.scss";
 
 const InterestingButton = () => {
-  return (
-    <div className='interestingButton'>InterestingButton</div>
-  )
-}
+  return <div value="" className="interestingButton"></div>;
+};
 
-export default InterestingButton
+export default InterestingButton;
