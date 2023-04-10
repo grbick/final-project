@@ -1,17 +1,17 @@
-import React from 'react'
-import './card.scss'
-import ProgressBar from "../ProgressBar"
-import InterestingButton from "../InterestingButton"
+import React from "react";
+import "./card.scss";
+import ProgressBar from "../ProgressBar";
+import InterestingButton from "../InterestingButton";
 
 const Card = () => {
   return (
-    <div className='card'>
+    <div className="card">
       <img src="" alt="" />
       <ProgressBar />
       <InterestingButton />
-      <p></p>
+      <p>123</p>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;
