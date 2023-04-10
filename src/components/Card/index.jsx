@@ -9,7 +9,7 @@ const Card = () => {
       <img src="" alt="" />
       <ProgressBar />
       <InterestingButton />
-      <p>123456</p>
+      <p></p>
     </div>
   );
 };
