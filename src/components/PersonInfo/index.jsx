@@ -3,7 +3,15 @@ import './personInfo.scss'
 
 const PersonInfo = () => {
   return (
-    <div className='personInfo'>PersonInfo</div>
+    <div className='personInfo'>
+      <p>Name:</p>
+      <p>Email:</p>
+      <p>Date of Birth:</p>
+      <p>Education:</p>
+      <button>Push CV</button>
+
+
+    </div>
   )
 }
 
