@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import "./logInPage.scss";
-import { useRef } from "react";
 import { applicationContext } from "../../context";
 
 const LogInPage = () => {
-  const { body,setBody,logIn,setUser,users,failed,setFailed,} = useContext(applicationContext);
+  const { body,setBody,logIn,setUser,users,failed,} = useContext(applicationContext);
   return (
     <div className="logInPage">
       <div className="hello-div">

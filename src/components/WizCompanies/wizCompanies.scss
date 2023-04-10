@@ -1,0 +1,10 @@
+.wizCompanies{
+    display: flex;
+    flex-direction: column;
+}
+.wizCompanyItem{
+    cursor: pointer;
+    & :hover{
+        background-color: beige;
+    }
+}

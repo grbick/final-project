@@ -1,0 +1,18 @@
+.wizPhase{
+    & > p{
+        margin-top: 30px;
+    }
+}
+.bold{
+    font-weight: 600;
+}
+.wiz2ndDiv {
+    margin-top: 30px;
+    & p{
+        font-weight: 600;
+        padding-top: 30px;
+    }
+    & p:first-of-type{
+        border-top: 1px solid black;
+    }
+}

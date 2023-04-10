@@ -1,16 +1,37 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./wizButton.scss";
+import { wizardContext } from "../../context";
 
 const WizButton = () => {
+  const { phase, setPhase,selectedCandidate,selectedCompany} = useContext(wizardContext);
+
+  function cycleWizard(phase){
+    switch(phase){
+      case 'candidates':
+        return <>
+          <button style={{visibility:'hidden'}}>Back</button>
+          <button disabled={!selectedCandidate ? 'disabled': ''} onClick={()=>setPhase('companies')}>Next</button>
+        </>
+      case 'companies':
+        return <>
+          <button onClick={()=>setPhase('candidates')}>Back</button>
+          <button disabled={!selectedCompany ? 'disabled': ''} onClick={()=>setPhase('reports')}>Next</button>
+        </>
+      case 'reports':
+        return <>
+        <button onClick={()=>setPhase('companies')}>Back</button>
+          <button>Submit</button>
+        </>
+      default:
+        return <>
+          <button disabled='disabled'>Back</button>
+          <button disabled={!selectedCandidate ? 'disabled': ''} onClick={()=>setPhase('companies')}>Next</button>
+        </>
+    }
+  }
   return (
-    <div className="wizButton">
-      <button type="button" className="backButton">
-        BackButton
-      </button>
-      WizButton
-      <button type="button" className="nextButton">
-        NextButton
-      </button>
+    <div className="wizButton"> 
+    {cycleWizard(phase)}
     </div>
   );
 };

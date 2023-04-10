@@ -1,17 +1,17 @@
 .wizButton {
     width: 100%;
-    height: 50px;
     display: flex;
     justify-content: space-around;
     background-color: gray;
-    padding-top: 15px;
+    padding-block: 50px;
+    & button{
+        padding: 10px;
+        border-radius: 10px;
+        background-color: green;
+        cursor: pointer;
+    &:first-of-type{
+        background-color: red;
+    }
+    }    
 }
 
-.wizButton > .nextButton {
-    height: 15px;
-    border: 1px solid black;
-}
-.wizButton > .backButton {
-    height: 15px;
-    border: 1px solid black;
-}

@@ -1,12 +1,20 @@
 .candidatesWrap {
     width: 100%;
     height: 80px;
-    background-color: gray;
+    background-color: beige;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex:1;
+    flex-wrap: wrap;
 }
-
-.candidatesWrap > span {
-    border: 1px solid black;
-}
+.candidateItem{
+    width: 70%;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+    & img{
+        height: 30px;
+        width: 30px;
+    }
+ }
