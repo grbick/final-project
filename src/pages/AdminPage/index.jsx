@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./adminPage.scss";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import AdminMain from "../../components/AdminMain";
+import DataSelector from "../../components/DataSelector";
+import ReportsWrap from "../../components/ReportsWrap";
+import CompaniesWrap from "../../components/CompaniesWrap";
+import CandidatesWrap from "../../components/CandidatesWrap";
 
 const AdminPage = () => {
+  const [data, setData] = useState("reports");
+
   return (
     <div className="adminPage">
-      AdminPage
-      <Header />
-      <Footer />
-      <AdminMain />
+      <DataSelector data={data} setData={setData} />
+      {data === "reports" ? (
+        <ReportsWrap />
+      ) : data === "companies" ? (
+        <CompaniesWrap />
+      ) : (
+        <CandidatesWrap />
+      )}
     </div>
   );
 };
