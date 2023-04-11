@@ -12,7 +12,7 @@ import ListItemText from "@mui/material/ListItemText";
 // const SideBarModal = () => {
 export default function SideBarModal() {
   const [state, setState] = React.useState({
-    Filter: false,
+    left: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -28,7 +28,7 @@ export default function SideBarModal() {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 230 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -51,7 +51,7 @@ export default function SideBarModal() {
   );
   return (
     <div>
-      {["Filter Button"].map((anchor) => (
+      {["Filter"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
           <Drawer

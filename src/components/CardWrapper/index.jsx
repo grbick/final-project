@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./cardWrapper.scss";
 import Card from "../Card";
-import { applicationContext } from "../../context";
+import { candidatesContext } from "../../context";
 
 const CardWrapper = () => {
-  const { candidates, setCandidates } = useContext(applicationContext);
+  const { candidates, setCandidates } = useContext(candidatesContext);
   console.log(candidates);
   return (
     <div className="cardWrapper">

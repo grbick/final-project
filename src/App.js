@@ -19,6 +19,7 @@ const App = () => {
   );
   const [failed, setFailed] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  const [companyID, setCompanyId] = useState("");
 
   function fetchUsers() {
     fetch("http://localhost:3333/444/api/users")
@@ -67,6 +68,8 @@ const App = () => {
         inputValue,
         setInputValue,
         setAccessToken,
+        companyID,
+        setCompanyId,
       }}
     >
       <div className="app">
