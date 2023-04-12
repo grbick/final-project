@@ -23,6 +23,16 @@ const App = () => {
   const [companyID, setCompanyId] = useState("");
   const [candidates, setCandidates] = useState([]);
   const [selectedChar, setSelectedChar] = useState({});
+  const [selectReport, setSelectReport] = useState([]);
+
+  function fetchReports() {
+    fetch("http://localhost:3333/444/api/reports")
+      .then((response) => response.json())
+      .then((data) => console.log(data) || setSelectReport(data));
+  }
+  useEffect(() => {
+    fetchReports();
+  }, []);
 
   function fetchUsers() {
     fetch("http://localhost:3333/444/api/users")
@@ -87,6 +97,8 @@ const App = () => {
         candidates,
         setSelectedChar,
         selectedChar,
+        selectReport,
+        setSelectReport,
       }}
     >
       <div className="app">

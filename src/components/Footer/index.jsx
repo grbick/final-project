@@ -6,7 +6,7 @@ import LogOutButton from "../LogOutButton/index";
 const Footer = () => {
   return (
     <div className="footer">
-      <HireButton /> Footer <LogOutButton />
+      <HireButton /> BIT Students 2023 <LogOutButton />
     </div>
   );
 };

@@ -9,10 +9,10 @@ import { useParams } from "react-router-dom";
 import { applicationContext } from "../../context";
 
 const CandidateProfilePage = ({ candidates }) => {
-  const { selectedChar } = useContext(applicationContext);
+  const { selectedChar, selectReport } = useContext(applicationContext);
   const params = useParams();
   // const clickedChar = candidates?.find((char) => params.id === char?.id);
-  // console.log(candidates);
+  console.log(useContext(applicationContext));
 
   return (
     <div className="candidateProfilePage">
@@ -22,7 +22,7 @@ const CandidateProfilePage = ({ candidates }) => {
           <img src={`${selectedChar?.avatar}`} alt="" />
           <PersonInfo char={selectedChar} />
         </div>
-        <ReportTable />
+        <ReportTable value={selectReport} />
       </main>
       <Footer />
     </div>
