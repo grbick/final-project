@@ -18,5 +18,3 @@ const LandingMain = () => {
 };
 
 export default LandingMain;
-
-

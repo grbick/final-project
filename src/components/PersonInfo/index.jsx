@@ -1,18 +1,16 @@
-import React from 'react'
-import './personInfo.scss'
+import React from "react";
+import "./personInfo.scss";
 
-const PersonInfo = () => {
+const PersonInfo = ({ char }) => {
   return (
-    <div className='personInfo'>
-      <p>Name:</p>
-      <p>Email:</p>
-      <p>Date of Birth:</p>
-      <p>Education:</p>
+    <div className="personInfo">
+      <p>{char?.name}</p>
+      <p>{char?.email}</p>
+      <p>{char?.birthday}</p>
+      <p>{char?.education}</p>
       <button>Push CV</button>
-
-
     </div>
-  )
-}
+  );
+};
 
-export default PersonInfo
+export default PersonInfo;

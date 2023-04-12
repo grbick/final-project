@@ -1,23 +1,16 @@
 import React, { useContext } from "react";
 import "./cardWrapper.scss";
 import Card from "../Card";
-import { candidatesContext } from "../../context";
+import { applicationContext } from "../../context";
 
 const CardWrapper = () => {
-  const { candidates, setCandidates } = useContext(candidatesContext);
+  const { candidates } = useContext(applicationContext);
   console.log(candidates);
   return (
     <div className="cardWrapper">
-      {candidates.map(
-        (element) =>
-          console.log(element) || (
-            <Card
-              key={element.id}
-              char={element}
-              setCandidates={setCandidates}
-            />
-          )
-      )}
+      {candidates?.map((element) => (
+        <Card key={element.id} char={element} candidates={candidates} />
+      ))}
     </div>
   );
 };

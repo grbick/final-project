@@ -6,6 +6,7 @@ import AdminPage from "./pages/AdminPage";
 import LandingPage from "./pages/LandingPage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import WizardPage from "./pages/WizardPage";
+import CandidateProfilePage from "./pages/CandidateProfilePage";
 
 const App = () => {
   const [body, setBody] = useState({
@@ -20,6 +21,8 @@ const App = () => {
   const [failed, setFailed] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [companyID, setCompanyId] = useState("");
+  const [candidates, setCandidates] = useState([]);
+  const [selectedChar, setSelectedChar] = useState({});
 
   function fetchUsers() {
     fetch("http://localhost:3333/444/api/users")
@@ -30,6 +33,16 @@ const App = () => {
     fetchUsers();
   }, []);
   useEffect(() => {}, [accessToken]);
+  function fetchCandidates() {
+    fetch("http://localhost:3333/api/candidates")
+      .then((response) => response.json())
+      .then((data) => setCandidates(data));
+  }
+
+  useEffect(() => {
+    fetchCandidates();
+    // eslint-disable-next-line
+  }, []);
 
   function logIn() {
     fetch("http://localhost:3333/login", {
@@ -70,6 +83,10 @@ const App = () => {
         setAccessToken,
         companyID,
         setCompanyId,
+        user,
+        candidates,
+        setSelectedChar,
+        selectedChar,
       }}
     >
       <div className="app">
@@ -86,6 +103,11 @@ const App = () => {
                 exact
                 path={`/${user.name.toLowerCase()}`}
                 element={<LandingPage />}
+              />
+              <Route
+                exact
+                path={`/${user.name.toLowerCase()}/:id`}
+                element={<CandidateProfilePage selectedChar={selectedChar} />}
               />
               <Route
                 path="*"
