@@ -26,7 +26,7 @@ const ReportsWrap = () => {
             </span>
             <span>Phase:{report?.phase}</span>
             <span>Status:{report?.status}</span>
-            <NotesButton notes={report?.notes} />
+            <NotesButton notes={report?.note} />
             <RemoveItem id={report?.id} />
           </div>
         );

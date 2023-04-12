@@ -9,6 +9,27 @@ const WizMain = () => {
   const [phase, setPhase] = useState("candidates");
   const [selectedCandidate, setSelectedCandidate] = useState("");
   const [selectedCompany, setSelectedCompany] = useState("");
+  const [newReport, setNewReport] = useState({
+    candidateID: `${selectedCandidate?.id}`,
+    candidateName: `${selectedCandidate?.name}`,
+    companyID: `${selectedCompany?.name}`,
+    companyName: `${selectedCompany?.name}`,
+    interviewDate: "",
+    phase: "",
+    status: "",
+    note: "",
+  });
+  function submitReport() {
+    fetch("http://localhost:3333/api/reports", {
+      method: "POST",
+      body: JSON.stringify(newReport),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "*/*",
+        Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
+      },
+    });
+  }
 
   return (
     <WizardProvider
@@ -19,6 +40,8 @@ const WizMain = () => {
         selectedCompany,
         setSelectedCandidate,
         setSelectedCompany,
+        setNewReport,
+        submitReport,
       }}
     >
       <div className="wizMain">

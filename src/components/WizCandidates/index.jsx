@@ -1,36 +1,35 @@
-import React, {useContext,useEffect,useState} from 'react'
-import './wizCandidates.scss'
+import React, { useContext } from "react";
+import "./wizCandidates.scss";
 import { applicationContext } from "../../context";
 import { wizardContext } from "../../context";
 
 const WizCandidates = () => {
-  const [candidates,setCandidates]= useState(null)
-  const { inputValue} = useContext(applicationContext);
-  const {setSelectedCandidate,selectedCandidate} = useContext(wizardContext);
+  const { setSelectedCandidate, selectedCandidate } = useContext(wizardContext);
+  const { inputValue, candidates } = useContext(applicationContext);
 
-  function fetchCandidates (){
-    fetch("http://localhost:3333/664/api/candidates")
-    .then((response)=> response.json())
-    .then((data)=>{const filtered = data.filter((candidate)=>(
-    candidate.name.toLowerCase().includes(inputValue)))
-    setCandidates(filtered)
-  })
-  }
-  useEffect(()=>{
-    fetchCandidates();
-},[inputValue]);
+  const filtered = candidates?.filter((candidate) =>
+    candidate.name.toLowerCase().includes(inputValue)
+  );
   return (
-    <div className='wizCandidates'>
-      {candidates?.map( (candidate) => {
+    <div className="wizCandidates">
+      {filtered?.map((candidate) => {
         return (
-          <div className={selectedCandidate?.name===candidate?.name ? "wizCandidateItem active": "wizCandidateItem"} key={candidate?.id} onClick={()=>setSelectedCandidate(candidate)}>
-          <img src={candidate?.avatar} alt="" />
-          <span>Candidate:{candidate?.name}</span>
-        </div>
-        )
+          <div
+            className={
+              selectedCandidate?.name === candidate?.name
+                ? "wizCandidateItem active"
+                : "wizCandidateItem"
+            }
+            key={candidate?.id}
+            onClick={() => setSelectedCandidate(candidate)}
+          >
+            <img src={candidate?.avatar} alt="" />
+            <span>Candidate:{candidate?.name}</span>
+          </div>
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default WizCandidates
+export default WizCandidates;
