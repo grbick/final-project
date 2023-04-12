@@ -15,20 +15,43 @@ const App = () => {
   const [user, setUser] = useState(JSON.parse(sessionStorage.getItem("user")));
   const [users, setUsers] = useState(null);
   const [accessToken, setAccessToken] = useState(
-    JSON.parse(sessionStorage.getItem("accessToken"))
+    sessionStorage.getItem("accessToken")
   );
   const [failed, setFailed] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  const [companyID, setCompanyID] = useState("");
+  const [candidates, setCandidates] = useState(null);
+  const [companies, setCompanies] = useState(null);
+  const [reports, setReports] = useState(null);
 
   function fetchUsers() {
     fetch("http://localhost:3333/444/api/users")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }
+  function fetchCandidates() {
+    fetch("http://localhost:3333/664/api/candidates")
+      .then((response) => response.json())
+      .then((data) => setCandidates(data));
+  }
+  function fetchCompanies() {
+    fetch("http://localhost:3333/664/api/companies")
+      .then((response) => response.json())
+      .then((data) => setCompanies(data));
+  }
+  function fetchReports() {
+    fetch("http://localhost:3333/664/api/reports")
+      .then((response) => response.json())
+      .then((data) => setReports(data));
+  }
   useEffect(() => {
     fetchUsers();
+    fetchCandidates();
+    fetchCompanies();
+    fetchReports();
   }, []);
-  useEffect(() => {}, [accessToken]);
+
+  // useEffect(() => {}, [accessToken]); ?????????
 
   function logIn() {
     fetch("http://localhost:3333/login", {
@@ -49,8 +72,8 @@ const App = () => {
         }
       })
       .then((data) => {
-        sessionStorage.setItem("accessToken", JSON.stringify(data.accessToken));
-        setAccessToken(JSON.parse(sessionStorage.getItem("accessToken")));
+        sessionStorage.setItem("accessToken", data.accessToken);
+        setAccessToken(sessionStorage.getItem("accessToken"));
       });
   }
 
@@ -67,6 +90,11 @@ const App = () => {
         inputValue,
         setInputValue,
         setAccessToken,
+        companyID,
+        setCompanyID,
+        candidates,
+        companies,
+        reports,
       }}
     >
       <div className="app">

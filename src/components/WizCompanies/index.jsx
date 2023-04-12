@@ -7,7 +7,7 @@ import { wizardContext } from "../../context";
 const WizCompanies = () => {
   const [companies,setCompanies]= useState(null)
   const { inputValue} = useContext(applicationContext);
-  const {setSelectedCompany} = useContext(wizardContext);
+  const {setSelectedCompany,selectedCompany} = useContext(wizardContext);
 
   function fetchCompanies (){
     fetch("http://localhost:3333/664/api/companies")
@@ -24,7 +24,7 @@ const WizCompanies = () => {
     <div className='wizCompanies'>
       {companies?.map( (company) => {
         return (
-        <div className="wizCompanyItem" key={company?.id} onClick={()=>setSelectedCompany(company?.name)}>
+        <div className={selectedCompany?.name===company?.name ? "wizCandidateItem active": "wizCompanyItem"} key={company?.id} onClick={()=>setSelectedCompany(company)}>
           <span>Company:{company?.name}</span>
         </div>
         )

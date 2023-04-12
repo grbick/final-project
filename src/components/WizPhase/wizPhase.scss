@@ -8,11 +8,13 @@
 }
 .wiz2ndDiv {
     margin-top: 30px;
-    & p{
-        font-weight: 600;
+    & p{ 
         padding-top: 30px;
     }
     & p:first-of-type{
         border-top: 1px solid black;
+    }
+    & span{
+        font-weight: 600;
     }
 }

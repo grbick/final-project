@@ -8,3 +8,6 @@ export const AdminProvider = adminContext.Provider;
 
 export const wizardContext = React.createContext();
 export const WizardProvider = wizardContext.Provider;
+
+export const notesContext = React.createContext();
+export const NotesProvider = notesContext.Provider;

@@ -1,10 +1,72 @@
-import React from 'react'
-import './createCandidateModal.scss'
+import React, { useContext } from "react";
+import "./createCandidateModal.scss";
+import { adminContext } from "../../context";
 
 const CreateCandidateModal = () => {
-  return (
-    <div className='createCandidateModal'>CreateCandidateModal</div>
-  )
-}
+  const { setCreateModal, newCandidate, setNewCandidate, submitCandidate } =
+    useContext(adminContext);
 
-export default CreateCandidateModal
+  return (
+    <div className="createCandidateModal">
+      <div className="candidateModal">
+        <label htmlFor="">
+          <span>Name:</span>
+          <input
+            type="text"
+            name=""
+            id="candidateName"
+            onInput={(e) =>
+              setNewCandidate({ ...newCandidate, name: e.target.value })
+            }
+          />
+        </label>
+        <label htmlFor="">
+          <span>Birthday:</span>
+          <input
+            type="date"
+            name=""
+            id="birthday"
+            onChange={(e) =>
+              setNewCandidate({ ...newCandidate, birthday: e.target.value })
+            }
+          />
+        </label>
+        <label htmlFor="">
+          <span>Email:</span>
+          <input
+            type="email"
+            name=""
+            id="candidateEmail"
+            onInput={(e) =>
+              setNewCandidate({ ...newCandidate, email: e.target.value })
+            }
+          />
+        </label>
+        <label htmlFor="">
+          <span>Education:</span>
+          <input
+            type="text"
+            name=""
+            id="education"
+            onInput={(e) =>
+              setNewCandidate({ ...newCandidate, education: e.target.value })
+            }
+          />
+        </label>
+        <button
+          onClick={() => {
+            submitCandidate();
+            setCreateModal(null);
+          }}
+        >
+          Submit
+        </button>
+        <button className="closeModal" onClick={() => setCreateModal(null)}>
+          Close
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default CreateCandidateModal;

@@ -6,16 +6,26 @@ import WizButton from "../WizButton";
 import { WizardProvider } from "../../context";
 
 const WizMain = () => {
-  const [phase,setPhase] = useState('candidates')
-  const [selectedCandidate, setSelectedCandidate] = useState('')
-  const [selectedCompany, setSelectedCompany] = useState('')
+  const [phase, setPhase] = useState("candidates");
+  const [selectedCandidate, setSelectedCandidate] = useState("");
+  const [selectedCompany, setSelectedCompany] = useState("");
+
   return (
-    <WizardProvider value={{phase,setPhase, selectedCandidate,selectedCompany,setSelectedCandidate,setSelectedCompany}}>
-    <div className="wizMain">
-      <WizPhase />
-      <WizWrap />
-    </div>
-      <WizButton/>
+    <WizardProvider
+      value={{
+        phase,
+        setPhase,
+        selectedCandidate,
+        selectedCompany,
+        setSelectedCandidate,
+        setSelectedCompany,
+      }}
+    >
+      <div className="wizMain">
+        <WizPhase />
+        <WizWrap />
+      </div>
+      <WizButton />
     </WizardProvider>
   );
 };

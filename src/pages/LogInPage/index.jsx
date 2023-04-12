@@ -3,7 +3,7 @@ import "./logInPage.scss";
 import { applicationContext } from "../../context";
 
 const LogInPage = () => {
-  const { body,setBody,logIn,setUser,users,failed,} = useContext(applicationContext);
+  const { body,setBody,logIn,setUser,users,failed, setCompanyID} = useContext(applicationContext);
   return (
     <div className="logInPage">
       <div className="hello-div">
@@ -27,6 +27,7 @@ const LogInPage = () => {
                 : "";
               sessionStorage.setItem("user", JSON.stringify(user));
               setUser(JSON.parse(sessionStorage.getItem("user")));
+              setCompanyID(user?.id)
             }}
             value={body.email}
           />

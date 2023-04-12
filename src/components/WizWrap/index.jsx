@@ -13,6 +13,7 @@ const WizWrap = () => {
       {phase === 'candidates'? <WizCandidates/>
       :phase === 'companies' ? <WizCompanies/>
       :<WizReports/>}
+      
     </div>
   );
 };

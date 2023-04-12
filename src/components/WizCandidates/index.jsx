@@ -6,7 +6,7 @@ import { wizardContext } from "../../context";
 const WizCandidates = () => {
   const [candidates,setCandidates]= useState(null)
   const { inputValue} = useContext(applicationContext);
-  const {setSelectedCandidate} = useContext(wizardContext);
+  const {setSelectedCandidate,selectedCandidate} = useContext(wizardContext);
 
   function fetchCandidates (){
     fetch("http://localhost:3333/664/api/candidates")
@@ -18,13 +18,12 @@ const WizCandidates = () => {
   }
   useEffect(()=>{
     fetchCandidates();
-
-  },[inputValue]);
+},[inputValue]);
   return (
     <div className='wizCandidates'>
       {candidates?.map( (candidate) => {
         return (
-        <div className="wizCandidateItem" key={candidate?.id} onClick={()=>setSelectedCandidate(candidate?.name)}>
+          <div className={selectedCandidate?.name===candidate?.name ? "wizCandidateItem active": "wizCandidateItem"} key={candidate?.id} onClick={()=>setSelectedCandidate(candidate)}>
           <img src={candidate?.avatar} alt="" />
           <span>Candidate:{candidate?.name}</span>
         </div>
