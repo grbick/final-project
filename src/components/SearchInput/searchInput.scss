@@ -1,5 +1,14 @@
 .searchInput {
     width: 120px;
     height: 50px;
-    
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: aliceblue;
+}
+
+.searchInput input {
+    padding: 4px;
+    border-radius: 8px;
+    height: 70%;
 }

@@ -8,9 +8,9 @@ const CardWrapper = () => {
   console.log(candidates);
   return (
     <div className="cardWrapper">
-      {candidates?.map((element) => (
+      {/* {candidates?.map((element) => (
         <Card key={element.id} char={element} candidates={candidates} />
-      ))}
+      ))} */}
     </div>
   );
 };

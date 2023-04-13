@@ -7,7 +7,7 @@ const CandidatesWrap = () => {
   const [candidates, setCandidates] = useState(null);
   const { inputValue } = useContext(applicationContext);
   function fetchCandidates() {
-    fetch("http://localhost:3333/664/api/candidates")
+    fetch("http://localhost:3333/api/candidates")
       .then((response) => response.json())
       .then((data) => {
         const filtered = data.filter((candidate) =>

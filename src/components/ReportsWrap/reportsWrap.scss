@@ -7,13 +7,22 @@
     flex: 1;
     align-items: center;
     flex-wrap: wrap;
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
 }
 .reportItem{
     border: 1px solid black;
-    padding-inline: 15px;
+    border-radius: 2px;
+    padding-inline: 12px;
+    padding: 4px;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 70%;
+    background-color: aliceblue;
     margin-block: 20px;
     & > span{
         border-right: 1px solid black;

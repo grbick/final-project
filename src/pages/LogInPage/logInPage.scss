@@ -1,3 +1,4 @@
+
 .logInPage {
   height: 100vh;
   width: 100%;
@@ -5,24 +6,94 @@
   justify-content: center;
   align-items: center;
   gap: 20%;
-  & > div {
-    width: 30%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+
+  &>div {
+    width: 10%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    align-items: center;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  .hello-div {
+    background-color: inherit;
+    font-size: 27px;
+    color: aliceblue;
+  }
+  .log-in-div{ 
+    background-color: rgba(240, 248, 255, 0.7) ;
     
   }
-  & button{
+
+  & button {
     margin: 0 auto;
     width: fit-content;
     display: inline;
     padding: 5px;
-    border: 1px solid black;
-    border-radius: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(240, 248, 255, 0.8) ;
   }
-  & input{
-    border: 1px solid black;
-    padding: 2px;
+
+ 
+
+  & input {
+    padding: 5px;
   }
+}
+
+
+
+.logInPage button:hover{
+  background-color: rgba(240, 248, 255, 1);
+  scale: 1.1;
+}
+
+
+.log-in-div {
+  // background-color: aliceblue;
+  // padding: 15px;
+  // display: flex;
+  // flex-direction: column;
+  // width: 80px;
+  // height: 200px;
+  // border-radius: 8px;
+}
+
+#username,
+#password {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  padding: 5px;
+  color: aliceblue;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+#username:focus {
+  border-bottom: 4px solid  #F9FAFD; 
+  font-weight: 600;
+}
+
+#password:focus {
+  border-bottom: 4px solid  #F9FAFD; 
 }
 

@@ -25,14 +25,14 @@ const App = () => {
   const [selectedChar, setSelectedChar] = useState({});
 
   function fetchUsers() {
-    fetch("http://localhost:3333/444/api/users")
+    fetch("http://localhost:3333/api/users")
       .then((response) => response.json())
       .then((data) => setUsers(data));
   }
   useEffect(() => {
     fetchUsers();
   }, []);
-  useEffect(() => {}, [accessToken]);
+  useEffect(() => { }, [accessToken]);
   function fetchCandidates() {
     fetch("http://localhost:3333/api/candidates")
       .then((response) => response.json())
@@ -50,7 +50,7 @@ const App = () => {
       body: JSON.stringify(body),
       headers: {
         "Content-Type": "application/json",
-        Accept: "*/*",
+        "Accept": "*/*",
       },
     })
       .then((response) => {
@@ -59,7 +59,7 @@ const App = () => {
           setFailed(!failed);
           setTimeout(() => {
             setFailed(false);
-          }, 3000);
+          }, 3000); 
         }
       })
       .then((data) => {
