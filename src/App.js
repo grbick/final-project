@@ -6,6 +6,7 @@ import AdminPage from "./pages/AdminPage";
 import LandingPage from "./pages/LandingPage";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import WizardPage from "./pages/WizardPage";
+import CandidateProfilePage from "./pages/CandidateProfilePage";
 
 const App = () => {
   const [body, setBody] = useState({
@@ -25,6 +26,8 @@ const App = () => {
   const [reports, setReports] = useState(null);
   const [notes, setNotes] = useState(null)
   const [freshData, setFreshData] = useState(false)
+  const [selectedChar, setSelectedChar] = useState({});
+  const [selectReport, setSelectReport] = useState([]);
 
   function fetchUsers() {
     fetch("http://localhost:3333/444/api/users")
@@ -106,7 +109,11 @@ const App = () => {
         notes,
         setNotes,
         freshData,
-        setFreshData
+        setFreshData,
+        setSelectedChar,
+        selectedChar,
+        selectReport,
+        setSelectReport,
       }}
     >
       <div className="app">
@@ -123,6 +130,11 @@ const App = () => {
                 exact
                 path={`/${user.name.toLowerCase()}`}
                 element={<LandingPage />}
+              />
+              <Route
+                exact
+                path={`/${user.name.toLowerCase()}/:id`}
+                element={<CandidateProfilePage selectedChar={selectedChar} />}
               />
               <Route
                 path="*"

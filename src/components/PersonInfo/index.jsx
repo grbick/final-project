@@ -1,18 +1,60 @@
-import React from 'react'
-import './personInfo.scss'
+import React from "react";
+import "./personInfo.scss";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
-const PersonInfo = () => {
+const PersonInfo = ({ char }) => {
   return (
-    <div className='personInfo'>
-      <p>Name:</p>
-      <p>Email:</p>
-      <p>Date of Birth:</p>
-      <p>Education:</p>
-      <button>Push CV</button>
-
-
-    </div>
-  )
-}
-
-export default PersonInfo
+    <Box
+      className="boxbox"
+      component="form"
+      sx={{
+        "& .MuiTextField-root": { m: 1, width: "80ch" },
+      }}
+      noValidate
+      autoComplete="off"
+    >
+      <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="Name:"
+          defaultValue={char?.name}
+        />
+      </div>
+      <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="E-mail:"
+          defaultValue={char?.email}
+        />
+      </div>
+      <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="Date of Birth:"
+          defaultValue={char?.birthday}
+        />
+      </div>
+      <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="Education:"
+          defaultValue={char?.education}
+        />
+      </div>
+      <div>
+        <TextField
+          required
+          id="outlined-required"
+          label="Additional references"
+          defaultValue="CV + "
+        />
+      </div>
+    </Box>
+  );
+};
+export default PersonInfo;

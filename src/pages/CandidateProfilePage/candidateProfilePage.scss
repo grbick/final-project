@@ -1,0 +1,12 @@
+.personDiv {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.personDiv > img {
+width: 50%;
+padding: 20px;
+}
