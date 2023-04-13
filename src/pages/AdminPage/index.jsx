@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./adminPage.scss";
 
 import ReportsWrap from "../../components/ReportsWrap";
@@ -9,12 +9,14 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import CreateCandidateModal from "../../components/CreateCandidateModal";
 import CreateCompanyModal from "../../components/CreateCompanyModal";
-import { AdminProvider } from "../../context";
 import NotesModal from "../../components/NotesModal";
+import { AdminProvider } from "../../context";
+import { applicationContext } from "../../context";
 
 const AdminPage = () => {
   const [data, setData] = useState("reports");
   const [createModal, setCreateModal] = useState(null);
+  const { notes, freshData, setFreshData } = useContext(applicationContext);
   const [newCompany, setNewCompany] = useState({
     name: "",
     email: "",
@@ -38,6 +40,7 @@ const AdminPage = () => {
         Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
       },
     });
+    setFreshData(!freshData);
   }
   function submitCandidate() {
     fetch("http://localhost:3333/api/candidates", {
@@ -49,6 +52,7 @@ const AdminPage = () => {
         Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
       },
     });
+    setFreshData(!freshData);
   }
 
   return (
@@ -79,6 +83,7 @@ const AdminPage = () => {
         <Footer />
         {createModal === "company" && <CreateCompanyModal />}
         {createModal === "candidate" && <CreateCandidateModal />}
+        {notes && <NotesModal />}
       </div>
     </AdminProvider>
   );

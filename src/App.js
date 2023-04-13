@@ -23,6 +23,8 @@ const App = () => {
   const [candidates, setCandidates] = useState(null);
   const [companies, setCompanies] = useState(null);
   const [reports, setReports] = useState(null);
+  const [notes, setNotes] = useState(null)
+  const [freshData, setFreshData] = useState(false)
 
   function fetchUsers() {
     fetch("http://localhost:3333/444/api/users")
@@ -46,10 +48,16 @@ const App = () => {
   }
   useEffect(() => {
     fetchUsers();
-    fetchCandidates();
+  }, [freshData]);
+  useEffect(() => {
     fetchCompanies();
+  }, [freshData]);
+  useEffect(() => {
+    fetchCandidates();
+  }, [freshData]);
+  useEffect(() => {
     fetchReports();
-  }, []);
+  }, [freshData]);
 
   // useEffect(() => {}, [accessToken]); ?????????
 
@@ -95,6 +103,10 @@ const App = () => {
         candidates,
         companies,
         reports,
+        notes,
+        setNotes,
+        freshData,
+        setFreshData
       }}
     >
       <div className="app">

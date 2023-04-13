@@ -4,7 +4,8 @@ import { applicationContext } from "../../context";
 import { wizardContext } from "../../context";
 
 const WizCandidates = () => {
-  const { setSelectedCandidate, selectedCandidate } = useContext(wizardContext);
+  const { setSelectedCandidate, selectedCandidate, newReport, setNewReport } =
+    useContext(wizardContext);
   const { inputValue, candidates } = useContext(applicationContext);
 
   const filtered = candidates?.filter((candidate) =>
@@ -21,7 +22,14 @@ const WizCandidates = () => {
                 : "wizCandidateItem"
             }
             key={candidate?.id}
-            onClick={() => setSelectedCandidate(candidate)}
+            onClick={() => {
+              setSelectedCandidate(candidate);
+              setNewReport({
+                ...newReport,
+                candidateID: candidate.id,
+                candidateName: candidate?.name,
+              });
+            }}
           >
             <img src={candidate?.avatar} alt="" />
             <span>Candidate:{candidate?.name}</span>

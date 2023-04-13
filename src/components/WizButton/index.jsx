@@ -46,7 +46,7 @@ const WizButton = () => {
             <button className="backToAdmin">
               <Link to="../">Back To Admin</Link>
             </button>
-            <button onClick={submitReport}>Submit</button>
+            <button onClick={submitReport}><Link to="../">Submit</Link></button>
           </>
         );
       default:

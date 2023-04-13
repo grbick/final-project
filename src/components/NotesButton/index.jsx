@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import "./notesButton.scss";
-import { adminContext } from "../../context";
+import { applicationContext } from "../../context";
 
-const NotesButton = () => {
-  const { setCreateModal } = useContext(adminContext);
+const NotesButton = (props) => {
+  const { setNotes } = useContext(applicationContext);
 
   return (
     <div className="notesButton">
-      <button onClick={() => setCreateModal("notes")}>Notes</button>
+      <button onClick={() => setNotes(props.notes)}>Notes</button>
     </div>
   );
 };

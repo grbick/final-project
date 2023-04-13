@@ -4,7 +4,8 @@ import { applicationContext } from "../../context";
 import { wizardContext } from "../../context";
 
 const WizCompanies = () => {
-  const { setSelectedCompany, selectedCompany } = useContext(wizardContext);
+  const { setSelectedCompany, selectedCompany, newReport, setNewReport } =
+    useContext(wizardContext);
   const { inputValue, companies } = useContext(applicationContext);
   const filtered = companies?.filter((company) =>
     company.name.toLowerCase().includes(inputValue)
@@ -21,7 +22,14 @@ const WizCompanies = () => {
                 : "wizCompanyItem"
             }
             key={company?.id}
-            onClick={() => setSelectedCompany(company)}
+            onClick={() => {
+              setSelectedCompany(company);
+              setNewReport({
+                ...newReport,
+                companyID: company.id,
+                companyName: company?.name,
+              });
+            }}
           >
             <span>Company:{company?.name}</span>
           </div>

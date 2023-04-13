@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./removeItem.scss";
+import { adminContext } from "../../context";
+import { applicationContext } from "../../context";
 
 const RemoveItem = (props) => {
+  const { freshData, setFreshData } = useContext(applicationContext);
+  const { data } = useContext(adminContext);
+
   function remove(itemID) {
-    fetch(`http://localhost:3333/api/companies/${itemID}`, {
+    fetch(`http://localhost:3333/api/${data}/${itemID}`, {
       method: "Delete",
       headers: {
         "Content-Type": "application/json",
@@ -11,6 +16,7 @@ const RemoveItem = (props) => {
         Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
       },
     });
+    setFreshData(!freshData);
   }
   return (
     <div className="removeItem">
