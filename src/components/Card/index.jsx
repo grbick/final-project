@@ -12,8 +12,8 @@ const Card = ({ char }) => {
       }`}
     >
       <div className="card">
-        <InterestingButton />
         <img src={char?.avatar} alt="happy people" />
+        <InterestingButton />
         <ProgressBar />
         <p>{char?.name}</p>
       </div>

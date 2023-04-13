@@ -1,33 +1,33 @@
-.progressBar{
-    display: flex;
-    gap: 2px;
-    width: 100%;
-    justify-content: space-evenly;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.progressBar {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .phase {
-    height: 12px;
-    width: 28px;
-    border-radius: 3px 0 0 3px;
-    border: none;
+  height: 12px;
+  width: 28px;
+  border-radius: 3px 0 0 3px;
+  border: none;
 }
 
-.phase1{
-    background-color: #ee9b00;
+.phase1 {
+  background-color: #ee9b00;
 }
 
-.phase2{
-    background-color: #ca6702;
-    border-radius: 0 0 0 0;
+.phase2 {
+  background-color: #ca6702;
+  border-radius: 0 0 0 0;
 }
 
-.phase3{
-    background-color: #bb3e03;
-    border-radius: 0 0 0 0;
+.phase3 {
+  background-color: #bb3e03;
+  border-radius: 0 0 0 0;
 }
 
-.phase4{
-    background-color: #d90429;
-    border-radius: 0 3px 3px 0;
+.phase4 {
+  background-color: #d90429;
+  border-radius: 0 3px 3px 0;
 }
