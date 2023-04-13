@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./sideBarModal.scss";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -9,9 +9,9 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
-// const SideBarModal = () => {
+
 export default function SideBarModal() {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     left: false,
   });
 
@@ -64,13 +64,7 @@ export default function SideBarModal() {
         </React.Fragment>
       ))}
     </div>
-    // <div className='sideBarModal'>
-    //   <button type='radio' value="inProgress">In Progress</button>
-    //   <button type='radio' value="interesting">Interesting</button>
-    //   <button type='radio' value="declined">Declined</button>
-    //   <button type='radio' value="otherCandidates">Other Candidates</button>
-    // </div>
   );
 }
 
-// // export default SideBarModal
+

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./candidatesWrap.scss";
 import RemoveItem from "../RemoveItem";
 import { applicationContext } from "../../context";
+import moment from "moment/moment";
 
 const CandidatesWrap = () => {
   const { inputValue, candidates } = useContext(applicationContext);
@@ -13,14 +14,13 @@ const CandidatesWrap = () => {
   return (
     <div className="candidatesWrap">
       {filtered?.map((candidate) => {
-        const date = new Date(candidate?.birthday);
         return (
           <div className="candidateItem" key={candidate?.id}>
             <img src={candidate?.avatar} alt="" />
             <span>Candidate:{candidate?.name}</span>
             <span>
               Birthday:
-              {`${date.getDate()}-${date.getMonth()}-${date.getFullYear()}`}
+              {moment(candidate?.birthday).format("DD-MM-YYYY")}
             </span>
             <span>E-mail:{candidate?.email}</span>
             <span>Education:{candidate?.education}</span>

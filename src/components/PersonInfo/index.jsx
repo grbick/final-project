@@ -1,60 +1,16 @@
 import React from "react";
 import "./personInfo.scss";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import moment from "moment/moment";
 
 const PersonInfo = ({ char }) => {
   return (
-    <Box
-      className="boxbox"
-      component="form"
-      sx={{
-        "& .MuiTextField-root": { m: 1, width: "80ch" },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div>
-        <TextField
-          required
-          id="outlined-required"
-          label="Name:"
-          defaultValue={char?.name}
-        />
-      </div>
-      <div>
-        <TextField
-          required
-          id="outlined-required"
-          label="E-mail:"
-          defaultValue={char?.email}
-        />
-      </div>
-      <div>
-        <TextField
-          required
-          id="outlined-required"
-          label="Date of Birth:"
-          defaultValue={char?.birthday}
-        />
-      </div>
-      <div>
-        <TextField
-          required
-          id="outlined-required"
-          label="Education:"
-          defaultValue={char?.education}
-        />
-      </div>
-      <div>
-        <TextField
-          required
-          id="outlined-required"
-          label="Additional references"
-          defaultValue="CV + "
-        />
-      </div>
-    </Box>
+    <div className="personInfo">
+      <p>{char?.name}</p>
+      <p>{moment(char?.birthday).format("DD-MM-YYYY")}</p>
+      <p>{char?.email}</p>
+      <p>{char?.education}</p>
+      {/* <p>char?.</p> */}
+    </div>
   );
 };
 export default PersonInfo;

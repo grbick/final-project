@@ -20,6 +20,7 @@ const AdminPage = () => {
   const [newCompany, setNewCompany] = useState({
     name: "",
     email: "",
+    interesting:[]
   });
   const [newCandidate, setNewCandidate] = useState({
     name: "",

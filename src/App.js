@@ -26,8 +26,6 @@ const App = () => {
   const [reports, setReports] = useState(null);
   const [notes, setNotes] = useState(null)
   const [freshData, setFreshData] = useState(false)
-  const [selectedChar, setSelectedChar] = useState({});
-  const [selectReport, setSelectReport] = useState([]);
 
   function fetchUsers() {
     fetch("http://localhost:3333/444/api/users")
@@ -62,7 +60,7 @@ const App = () => {
     fetchReports();
   }, [freshData]);
 
-  // useEffect(() => {}, [accessToken]); ?????????
+
 
   function logIn() {
     fetch("http://localhost:3333/login", {
@@ -110,10 +108,7 @@ const App = () => {
         setNotes,
         freshData,
         setFreshData,
-        setSelectedChar,
-        selectedChar,
-        selectReport,
-        setSelectReport,
+
       }}
     >
       <div className="app">
@@ -134,7 +129,7 @@ const App = () => {
               <Route
                 exact
                 path={`/${user.name.toLowerCase()}/:id`}
-                element={<CandidateProfilePage selectedChar={selectedChar} />}
+                element={<CandidateProfilePage />}
               />
               <Route
                 path="*"

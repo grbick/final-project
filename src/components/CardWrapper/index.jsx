@@ -5,7 +5,7 @@ import { applicationContext } from "../../context";
 
 const CardWrapper = () => {
   const { candidates } = useContext(applicationContext);
-  console.log(candidates);
+
   return (
     <div className="cardWrapper">
       {candidates?.map((element) => (

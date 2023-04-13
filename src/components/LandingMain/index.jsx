@@ -10,7 +10,7 @@ const LandingMain = () => {
       <div className="titleDiv">
         <h2>Candidates</h2>
       </div>
-      {/* <SideBarModal /> */}
+      <SideBarModal />
       <CardWrapper />
       <Pagination />
     </div>
