@@ -14,6 +14,7 @@ const App = () => {
     password: "",
   });
   const [user, setUser] = useState(JSON.parse(sessionStorage.getItem("user")));
+  const [userReports, setUserReports] = useState(null);
   const [users, setUsers] = useState(null);
   const [accessToken, setAccessToken] = useState(
     sessionStorage.getItem("accessToken")
@@ -25,6 +26,8 @@ const App = () => {
   const [companies, setCompanies] = useState(null);
   const [reports, setReports] = useState(null);
   const [notes, setNotes] = useState(null)
+  const [side, setSide] = useState(null)
+  const [sideFilter, setSideFilter] = useState(null)
   const [freshData, setFreshData] = useState(false)
 
   function fetchUsers() {
@@ -60,7 +63,9 @@ const App = () => {
     fetchReports();
   }, [freshData]);
 
+  // function paginate(array){
 
+  // }
 
   function logIn() {
     fetch("http://localhost:3333/login", {
@@ -92,6 +97,7 @@ const App = () => {
         failed,
         setFailed,
         users,
+        user,
         setUser,
         logIn,
         body,
@@ -108,7 +114,12 @@ const App = () => {
         setNotes,
         freshData,
         setFreshData,
-
+        side,
+        setSide,
+        sideFilter,
+        setSideFilter,
+        userReports,
+        setUserReports
       }}
     >
       <div className="app">

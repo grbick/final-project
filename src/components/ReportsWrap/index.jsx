@@ -13,6 +13,7 @@ const ReportsWrap = () => {
       report.companyName.toLowerCase().includes(inputValue) ||
       report.candidateName.toLowerCase().includes(inputValue)
   );
+  // const paginated = paginate(filtered)
   return (
     <div className="reportsWrap">
       {filtered?.map((report) => {

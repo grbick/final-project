@@ -3,3 +3,19 @@
   display: flex;
   flex-direction: column;
 }
+.titleDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 5%;
+  & button:last-of-type{
+    visibility: hidden;
+    background-color: transparent;
+    cursor: pointer;
+    &.visible{
+      visibility: visible;
+    }
+  }
+}
+

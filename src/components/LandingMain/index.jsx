@@ -1,16 +1,24 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./landingMain.scss";
-import SideBarModal from "../SideBarModal";
 import CardWrapper from "../CardWrapper";
 import Pagination from "../Pagination";
+import FilterButton from "../FilterButton";
+import { applicationContext } from "../../context";
+
 
 const LandingMain = () => {
+  const { setSideFilter,sideFilter } = useContext(applicationContext);
+
   return (
     <div className="landingMain">
       <div className="titleDiv">
+        <FilterButton/>
         <h2>Candidates</h2>
+        <button 
+        onClick={()=>setSideFilter(null)}
+        className={sideFilter?"visible":""}
+        >x Clear</button>
       </div>
-      <SideBarModal />
       <CardWrapper />
       <Pagination />
     </div>

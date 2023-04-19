@@ -3,7 +3,7 @@ import "./logInPage.scss";
 import { applicationContext } from "../../context";
 
 const LogInPage = () => {
-  const { body,setBody,logIn,setUser,users,failed, setCompanyID} = useContext(applicationContext);
+  const { body,setBody,logIn,setUser,users,failed, setCompanyID,} = useContext(applicationContext);
   return (
     <div className="logInPage">
       <div className="hello-div">

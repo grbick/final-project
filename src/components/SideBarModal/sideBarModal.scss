@@ -1,0 +1,30 @@
+.sideBarModal {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    & div {
+      position: fixed;
+      width: 25%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      background-color: white;
+      padding: 50px;
+      & span{
+        cursor: pointer;
+        border-radius: 20px;
+        padding: 5px;
+        &:hover{
+            background-color: beige;
+        }
+        &:last-of-type{
+            margin-top: 20px;
+        }
+      }
+    }
+  }
+  

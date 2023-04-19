@@ -3,7 +3,7 @@ import "./logOutButton.scss";
 import { applicationContext } from "../../context";
 
 const LogOutButton = () => {
-  const { setAccessToken, body, setBody } = useContext(applicationContext);
+  const { setAccessToken, body, setBody,setSideFilter } = useContext(applicationContext);
 
   return (
     <div className="logOutButton">
@@ -14,6 +14,7 @@ const LogOutButton = () => {
           sessionStorage.setItem("user", JSON.stringify(""));
           setAccessToken(sessionStorage.getItem("accessToken"));
           setBody({ ...body, email: "", password: "" });
+          setSideFilter(null)
         }}
       >
         LogOutButton
