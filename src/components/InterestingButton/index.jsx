@@ -1,8 +1,18 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./interestingButton.scss";
+import { applicationContext } from "../../context";
 
-const InterestingButton = () => {
-  return <div className="interestingButton"></div>;
+
+const InterestingButton = ({isInteresting, setIsInteresting, candidate}) => {
+  const { setInteresting, removeInteresting } = useContext(applicationContext);
+
+  return <div className="interestingButton"
+  onClick={(e)=>{
+    e.preventDefault()
+    isInteresting ? removeInteresting(candidate?.id) : setInteresting(candidate?.id)
+    setIsInteresting(!isInteresting)
+  }}
+  >*</div>;
 };
 
 export default InterestingButton;

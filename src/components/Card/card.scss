@@ -13,4 +13,9 @@
     border-radius: 20px;
     object-fit: cover;
   }
+  &.isInteresting{
+    &p{
+      background-color: beige;
+    }
+  }
 }
