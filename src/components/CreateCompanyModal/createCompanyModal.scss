@@ -8,10 +8,28 @@
     background-color: rgba(0, 0, 0 ,0.5);
 }
 .companyModal{
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background-color: white;
+    background-color: #DCD7C9;
     padding: 100px;
+    & input{
+        width: 200px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+    & button{
+        width: fit-content;
+        margin: 0 auto;
+        padding: 5px;
+    border-radius: 10px;
+    background-color: #A27B5C;
+    color: #DCD7C9;
+    cursor: pointer;
+    &:last-of-type{
+        background-color: #fe3b3b;
+    }
+    }
 }

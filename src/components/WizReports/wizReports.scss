@@ -1,6 +1,24 @@
 .wizReports{
-
+    width: 100%;
+    min-width: fit-content;
+    & p{
+        margin-bottom: 5px;
+    }
+    & input,select,textarea{
+        padding: 3px;
+        border-radius: 5px;
+    }
 }
 .reportSelects{
     display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 30%;
+}
+.reportNotes{
+    margin-top: 10px;
+    width: 100%;
+    & textarea{
+        width: 100%;
+        }
 }

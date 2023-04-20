@@ -32,7 +32,7 @@ const WizCandidates = () => {
             }}
           >
             <img src={candidate?.avatar} alt="" />
-            <span>Candidate:{candidate?.name}</span>
+            <span>{candidate?.name}</span>
           </div>
         );
       })}

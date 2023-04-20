@@ -4,7 +4,8 @@ import SearchInput from '../SearchInput/index'
 
 const Header = () => {
   return (
-    <div className='header'>header
+    <div className='header'>
+      <h2>AlphaAlpha</h2>
     <SearchInput/></div>
   )
 }

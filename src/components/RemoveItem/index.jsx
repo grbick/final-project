@@ -21,7 +21,7 @@ const RemoveItem = (props) => {
   return (
     <div className="removeItem">
       <button className="removeButton" onClick={() => remove(props.id)}>
-        RemoveButt
+        Remove
       </button>
     </div>
   );

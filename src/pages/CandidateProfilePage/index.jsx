@@ -6,7 +6,7 @@ import ReportTable from "../../components/ReportTable";
 import Footer from "../../components/Footer";
 import NotesModal from "../../components/NotesModal";
 
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { applicationContext } from "../../context";
 
 const CandidateProfilePage = () => {
@@ -22,7 +22,7 @@ const CandidateProfilePage = () => {
         <div className="personDiv">
           <img src={`${clickedChar?.avatar}`} alt="" />
           <PersonInfo char={clickedChar} />
-          <button><Link to={"../"}>Back</Link></button>
+          
         </div>
         <ReportTable id={clickedChar?.id}/>
      

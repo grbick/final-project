@@ -4,31 +4,31 @@
       "id": 73143881,
       "name": "Google",
       "email": "office@google.com",
-      "interesting":[]
+      "interesting": []
     },
     {
       "id": 8458231,
       "name": "Facebook",
       "email": "office@facebook.com",
-      "interesting":[]
+      "interesting": []
     },
     {
       "id": 10149693,
       "name": "Microsoft",
       "email": "office@outlook.com",
-      "interesting":[]
+      "interesting": []
     },
     {
       "id": 74578008,
       "name": "Tesla",
       "email": "office@tesla.com",
-      "interesting":[]
+      "interesting": []
     },
     {
       "id": 75291264,
       "name": "Alphabet",
       "email": "office@alphabet.com",
-      "interesting":[]
+      "interesting": []
     }
   ],
   "candidates": [
@@ -693,7 +693,7 @@
       "surname": "Developeric",
       "age": 404,
       "id": 1,
-      "admin":true
+      "admin": true
     },
     {
       "email": "office@google.com",
@@ -702,7 +702,7 @@
       "surname": "Googlic",
       "age": 404,
       "id": 73143881,
-      "admin":false
+      "admin": false
     },
     {
       "email": "office@facebook.com",
@@ -711,7 +711,7 @@
       "surname": "Fejsbukic",
       "age": 404,
       "id": 8458231,
-      "admin":false
+      "admin": false
     },
     {
       "email": "office@alphabet.com",
@@ -720,7 +720,7 @@
       "surname": "Alphabetic",
       "age": 404,
       "id": 75291264,
-      "admin":false
+      "admin": false
     },
     {
       "email": "office@outlook.com",
@@ -729,7 +729,7 @@
       "surname": "Microsoftic",
       "age": 404,
       "id": 10149693,
-      "admin":false
+      "admin": false
     },
     {
       "email": "office@tesla.com",
@@ -738,7 +738,7 @@
       "surname": "Nikola",
       "age": 404,
       "id": 74578008,
-      "admin":false
+      "admin": false
     }
   ]
 }

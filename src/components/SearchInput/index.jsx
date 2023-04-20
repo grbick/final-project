@@ -9,7 +9,7 @@ const SearchInput = () => {
     <div className="searchInput">
       SearchInput
       
-        <input type="text" name="" id="" placeholder="search something..."
+        <input type="text" name="" id="" placeholder="Search something..."
         onInput={(e)=>{setInputValue(e.target.value)}}
         value={inputValue}/>
     </div>

@@ -5,29 +5,42 @@
   justify-content: center;
   align-items: center;
   gap: 20%;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #2C3639, #3F4E4F, #A27B5C, #DCD7C9);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
+  color: #2C3639;
   & > div {
-    // width: 30%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: wheat;
+    background-color: #DCD7C9;
     padding: 20px;
+    border-radius: 10px;
   }
   & button {
     margin: 0 auto;
     width: fit-content;
-    display: inline;
     padding: 5px;
-    border: 1px solid black;
-    border-radius: 20px;
+    border-radius: 10px;
+    background-color: #A27B5C;
+    color: #DCD7C9;
+    cursor: pointer;
   }
   & input {
-    border: 1px solid black;
+    border: 1px solid #2C3639;
     padding: 2px;
+  }
+}
+.hello-div{
+  & div{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20%;
+    align-items: center;
+    & span{
+      font-size: 1.6em;
+    }
   }
 }
 

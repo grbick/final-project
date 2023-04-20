@@ -1,4 +1,11 @@
-.logOutButton > button {
+.backButton{
+    & a{
+    color: #DCD7C9;
+}
+}
+
+
+.backButton > button {
     padding: 5px;
     border-radius: 10px;
     background-color: #A27B5C;
@@ -6,6 +13,6 @@
     cursor: pointer;
 }
 
-.logOutButton button:hover {
+.backButton button:hover {
     scale: 1.05;
 }

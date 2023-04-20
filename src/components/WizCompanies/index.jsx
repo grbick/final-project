@@ -18,7 +18,7 @@ const WizCompanies = () => {
           <div
             className={
               selectedCompany?.name === company?.name
-                ? "wizCandidateItem active"
+                ? "wizCompanyItem active"
                 : "wizCompanyItem"
             }
             key={company?.id}

@@ -13,9 +13,6 @@ const WizButton = () => {
         return (
           <>
             <button style={{ visibility: "hidden" }}>Back</button>
-            <button className="backToAdmin">
-              <Link to="../">Back To Admin</Link>
-            </button>
             <button
               disabled={!selectedCandidate ? "disabled" : ""}
               onClick={() => setPhase("companies")}
@@ -28,9 +25,6 @@ const WizButton = () => {
         return (
           <>
             <button onClick={() => setPhase("candidates")}>Back</button>
-            <button className="backToAdmin">
-              <Link to="../">Back To Admin</Link>
-            </button>
             <button
               disabled={!selectedCompany ? "disabled" : ""}
               onClick={() => setPhase("reports")}
@@ -43,9 +37,6 @@ const WizButton = () => {
         return (
           <>
             <button onClick={() => setPhase("companies")}>Back</button>
-            <button className="backToAdmin">
-              <Link to="../">Back To Admin</Link>
-            </button>
             <button onClick={submitReport}><Link to="../">Submit</Link></button>
           </>
         );
@@ -53,9 +44,6 @@ const WizButton = () => {
         return (
           <>
             <button disabled="disabled">Back</button>
-            <button className="backToAdmin">
-              <Link to="../">Back To Admin</Link>
-            </button>
             <button
               disabled={!selectedCandidate ? "disabled" : ""}
               onClick={() => setPhase("companies")}

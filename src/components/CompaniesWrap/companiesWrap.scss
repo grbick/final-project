@@ -1,21 +1,21 @@
 .companiesWrap {
     width: 100%;
-    background-color: beige;
+    background-color: #DCD7C9;
+    padding: 50px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex: 1;
     align-items: center;
-    gap: 50px;
-    flex:1;
+    flex-wrap: wrap;
+    border-collapse: collapse;
+    & th{
+        font-weight: 500;
+    }
+    & tr, th, td{
+    color: #2C3639;
+    border: 1px solid #2C3639;
+    padding: 10px;
 }
-.companyItem{
-    border: 1px solid black;
-    width: 70%;
-    gap: 50px;
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 20px;
-   
 }
 
 

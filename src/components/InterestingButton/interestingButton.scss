@@ -1,22 +1,15 @@
 .interestingButton{
-    border-radius: 25px;
-    height: 22px;
-    width:22px;
-    margin-left: 3px;
-    margin-top: 2px;
-    background-image: url("starr.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 5px;
-    border: 1.5px solid tomato;
-   
+    display: inline-block;
+    padding: 2px 3px;
+    border-radius: 20px;
+    & img{
+        width: 20px;
+        height: 20px;
+    }
 }
 
-.interestingButton > png {
-    width: 15px;
-    height: 15px;
-}
+
 
 .interestingButton:hover {
-    scale: 1.5;
+    scale: 1.1;
 }

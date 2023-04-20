@@ -1,16 +1,38 @@
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  box-shadow: 0 0 5px black;
-  border-radius: 20px;
-  padding: 20px;
-  & img {
+  margin: 10px;
+  padding: 10px 10px 5px 10px;
+  text-align: center;
+  position: relative;
+  border: 1px solid #A27B5C;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #A27B5C;
+  
+  background-color: #3F4E4F;
+  & #avatar {
     width: 150px;
     height: 150px;
     border-radius: 20px;
     object-fit: cover;
+    box-shadow: 0 0 10px #2C3639;
+  }
+  & a{
+    color: #2C3639;
+  }
+  & .candidateName{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5px;
+    color: #DCD7C9;
+    & div{
+  
+    }
+  }
+  &.isInteresting{
+    & .candidateName div{
+  
+      }
   }
 }

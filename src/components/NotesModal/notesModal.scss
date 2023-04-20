@@ -8,12 +8,20 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
   & div {
+    color: #2C3639;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background-color: white;
+    background-color: #DCD7C9;
     padding: 50px;
+    & button{
+      border-radius: 20px;
+      padding: 5px;
+      background-color: #fe3b3b;
+      cursor: pointer;
+      color: #DCD7C9;
+    }
   }
 }

@@ -13,25 +13,39 @@ const ReportsWrap = () => {
       report.companyName.toLowerCase().includes(inputValue) ||
       report.candidateName.toLowerCase().includes(inputValue)
   );
+  // const paginated = paginate(filtered)
   return (
-    <div className="reportsWrap">
+    <table className="reportsWrap">
+      <tbody>
+        <tr>
+          <th>Company</th>
+          <th>Candidate</th>
+          <th>Date</th>
+          <th>Phase</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
       {filtered?.map((report) => {
         return (
-          <div className="reportItem" key={report?.id}>
-            <span>Company:{report?.companyName}</span>
-            <span>Candidate:{report?.candidateName}</span>
-            <span>
-              Date:
+          <tr className="reportItem" key={report?.id}>
+            <td>{report?.companyName}</td>
+            <td>{report?.candidateName}</td>
+            <td>
               {moment(report?.interviewDate).format("DD-MM-YYYY")}
-            </span>
-            <span>Phase:{report?.phase}</span>
-            <span>Status:{report?.status}</span>
+            </td>
+            <td>{report?.phase}</td>
+            <td>{report?.status}</td>
+            <td>
             <NotesButton notes={report?.note} />
+            </td>
+            <td>
             <RemoveItem id={report?.id} />
-          </div>
+            </td>
+          </tr>
         );
       })}
-    </div>
+      </tbody>
+    </table>
   );
 };
 

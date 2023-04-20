@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/interviews-reports-api-mock
 
 # testing
 /coverage

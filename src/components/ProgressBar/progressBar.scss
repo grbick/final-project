@@ -3,31 +3,24 @@
   gap: 5px;
   width: 100%;
   justify-content: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-top: 10px;
 }
 .phase {
   height: 12px;
-  width: 28px;
-  border-radius: 3px 0 0 3px;
+  width: 20%;
   border: none;
+  background-color: #DCD7C9;
+  &:first-of-type{
+    border-radius: 3px 0 0 3px;
+  }
+  &:last-of-type{
+    border-radius: 0 3px 3px 0;
+  }
 }
 
-.phase1 {
-  background-color: #ee9b00;
+.green{
+  background-color: green;
 }
-
-.phase2 {
-  background-color: #ca6702;
-  border-radius: 0 0 0 0;
-}
-
-.phase3 {
-  background-color: #bb3e03;
-  border-radius: 0 0 0 0;
-}
-
-.phase4 {
-  background-color: #d90429;
-  border-radius: 0 3px 3px 0;
+.red{
+  background-color: red;
 }

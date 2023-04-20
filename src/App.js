@@ -14,6 +14,7 @@ const App = () => {
     password: "",
   });
   const [user, setUser] = useState(JSON.parse(sessionStorage.getItem("user")));
+  const [userReports, setUserReports] = useState(null);
   const [users, setUsers] = useState(null);
   const [accessToken, setAccessToken] = useState(
     sessionStorage.getItem("accessToken")
@@ -25,6 +26,8 @@ const App = () => {
   const [companies, setCompanies] = useState(null);
   const [reports, setReports] = useState(null);
   const [notes, setNotes] = useState(null)
+  const [side, setSide] = useState(null)
+  const [sideFilter, setSideFilter] = useState(null)
   const [freshData, setFreshData] = useState(false)
 
   function fetchUsers() {
@@ -60,7 +63,40 @@ const App = () => {
     fetchReports();
   }, [freshData]);
 
+  // function paginate(array){
 
+  // }
+  // function getInteresting(candidateID){
+  //   const company = companies?.filter((company)=>user?.id===company.id)
+  //   console.log(company);
+  //   return company?[0].interesting.find(candidateID);
+  // }
+  function setInteresting(id){
+    const company = companies?.find((company)=>user?.id===company.id)
+    fetch(`http://localhost:3333/api/companies`, {
+            method: "PATCH",
+            body: JSON.stringify({id:company.id,
+              interesting:[...company.interesting,id]
+            }),
+            headers: {
+               "Content-Type": "application/json",
+              Accept: "*/*",
+             Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
+           },
+           })
+  }
+  function removeInteresting(id){
+    const company = companies?.find((company)=>user?.id===company.id)
+    fetch("http://localhost:3333/api/companies", {
+            method: "PUT",
+            body: JSON.stringify(company.interesting.filter((e)=>e!==id)),
+            headers: {
+               "Content-Type": "application/json",
+              Accept: "*/*",
+             Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
+           },
+           });
+  }
 
   function logIn() {
     fetch("http://localhost:3333/login", {
@@ -92,6 +128,7 @@ const App = () => {
         failed,
         setFailed,
         users,
+        user,
         setUser,
         logIn,
         body,
@@ -108,7 +145,15 @@ const App = () => {
         setNotes,
         freshData,
         setFreshData,
-
+        side,
+        setSide,
+        sideFilter,
+        setSideFilter,
+        userReports,
+        setUserReports,
+        // getInteresting,
+        setInteresting,
+        removeInteresting
       }}
     >
       <div className="app">
