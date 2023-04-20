@@ -10,7 +10,7 @@ const CreateCandidateModal = () => {
     <div className="createCandidateModal">
       <div className="candidateModal">
         <label htmlFor="">
-          <span>Name:</span>
+          <p>Name:</p>
           <input
             type="text"
             name=""
@@ -21,7 +21,7 @@ const CreateCandidateModal = () => {
           />
         </label>
         <label htmlFor="">
-          <span>Birthday:</span>
+          <p>Birthday:</p>
           <input
             type="date"
             name=""
@@ -32,7 +32,7 @@ const CreateCandidateModal = () => {
           />
         </label>
         <label htmlFor="">
-          <span>Email:</span>
+          <p>Email:</p>
           <input
             type="email"
             name=""
@@ -43,7 +43,7 @@ const CreateCandidateModal = () => {
           />
         </label>
         <label htmlFor="">
-          <span>Education:</span>
+          <p>Education:</p>
           <input
             type="text"
             name=""

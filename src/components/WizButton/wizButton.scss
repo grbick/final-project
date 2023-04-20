@@ -2,18 +2,20 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: gray;
-    padding-block: 50px;
+    background-color: #3F4E4F;
+    padding-block: 25px;
     & button{
-        padding: 10px;
+        color: #2C3639;
+        padding: 5px 10px;
         border-radius: 10px;
-        background-color: green;
+        background-color: rgb(29, 153, 29);
         cursor: pointer;
+        &:disabled{
+            cursor: default;
+            color: #3F4E4F;
+        }
     &:first-of-type{
-        background-color: red;
-    }
-    &:nth-of-type(2){
-        background-color: yellow;
+        background-color: #fe3b3b;
     }
     }    
 }

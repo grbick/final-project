@@ -3,6 +3,7 @@ import "./card.scss";
 import ProgressBar from "../ProgressBar";
 import InterestingButton from "../InterestingButton";
 import { Link } from "react-router-dom";
+
 // import { applicationContext } from "../../context";
 
 
@@ -12,18 +13,19 @@ const Card = ({ candidate }) => {
   const [isInteresting,setIsInteresting]= useState(false)
   // ()=>getInteresting(candidate?.id)
   return (
-    <Link
+    
+      <div className={isInteresting?"card isInteresting":"card"}>
+        <Link
       to={`/${JSON.parse(sessionStorage.getItem("user")).name.toLowerCase()}/${
         candidate?.id
       }`}
     >
-      <div className={isInteresting?"card isInteresting":"card"}>
-        <img src={candidate?.avatar} alt="happy people" />
-        <InterestingButton isInteresting={isInteresting} setIsInteresting={setIsInteresting} candidate={candidate}/>
+        <img src={candidate?.avatar} alt="happy people" id="avatar"/>
+        
         <ProgressBar id={candidate?.id}/>
-        <p>{candidate?.name}</p>
+        <div className="candidateName">{candidate?.name} <InterestingButton isInteresting={isInteresting} setIsInteresting={setIsInteresting} candidate={candidate}/></div>
+        </Link>
       </div>
-    </Link>
   );
 };
 

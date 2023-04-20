@@ -10,18 +10,24 @@ const CompaniesWrap = () => {
     company.name.toLowerCase().includes(inputValue)
   );
   return (
-    <div className="companiesWrap">
+    <table className="companiesWrap">
+      <tbody>
+        <tr>
+          <th>Company</th>
+          <th>Email</th>
+        </tr>
       {filtered?.map((company) => {
         return (
-          <div className="companyItem" key={company?.id}>
-            <span>Company:{company?.name}</span>
-            <span>E-mail:{company?.email}</span>
+          <tr className="companyItem" key={company?.id}>
+            <td>{company?.name}</td>
+            <td>{company?.email}</td>
             {/* <button onClick={}>Go To Company Page</button> */}
-            <RemoveItem id={company?.id} />
-          </div>
+            <td><RemoveItem id={company?.id} /></td>
+          </tr>
         );
       })}
-    </div>
+      </tbody>
+    </table>
   );
 };
 

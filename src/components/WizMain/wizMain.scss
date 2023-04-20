@@ -1,6 +1,8 @@
 .wizMain{
     margin: 0 auto;
+    width: 80%;
     display: flex;
-    gap: 300px;
+    justify-content: space-around;
     flex: 1;
+    padding-block: 70px;
 }

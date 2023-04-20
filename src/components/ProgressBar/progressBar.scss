@@ -3,14 +3,13 @@
   gap: 5px;
   width: 100%;
   justify-content: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-top: 10px;
 }
 .phase {
   height: 12px;
-  width: 28px;
+  width: 20%;
   border: none;
-  background-color: beige;
+  background-color: #DCD7C9;
   &:first-of-type{
     border-radius: 3px 0 0 3px;
   }

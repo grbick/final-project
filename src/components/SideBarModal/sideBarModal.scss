@@ -12,17 +12,30 @@
       flex-direction: column;
       align-items: center;
       gap: 30px;
-      background-color: white;
+      background-color: #DCD7C9;
       padding: 50px;
+      color: #2C3639;
       & span{
         cursor: pointer;
         border-radius: 20px;
         padding: 5px;
         &:hover{
-            background-color: beige;
+            background-color: #A27B5C;
+            color: #DCD7C9;
         }
         &:last-of-type{
             margin-top: 20px;
+        }
+      }
+      & button{
+        background-color: transparent;
+        color: #2C3639;
+        border-radius: 20px;
+        padding: 5px;
+        &:last-of-type{
+          background-color: #fe3b3b;
+          cursor: pointer;
+          color: #DCD7C9;
         }
       }
     }

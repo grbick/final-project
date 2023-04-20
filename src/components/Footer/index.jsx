@@ -1,12 +1,12 @@
 import React from "react";
 import "./footer.scss";
-import HireButton from "../HireButton";
+import BackButton from "../BackButton";
 import LogOutButton from "../LogOutButton/index";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <HireButton /> BIT Students 2023 <LogOutButton />
+      <BackButton /> <span>BIT Students 2023</span> <LogOutButton />
     </div>
   );
 };

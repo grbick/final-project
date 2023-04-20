@@ -1,19 +1,29 @@
 .wizCandidates{
+    width: 80%;
     display: flex;
     flex-direction: column;
     overflow: auto;
     flex-wrap: wrap;
+    align-content: center;
 }
 .wizCandidateItem{
+    width: fit-content;
+    padding-right: 5px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin: 2px;
     & img{
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
     }
     cursor: pointer;
     &:hover{
-        background-color: beige;
+        background-color: #A27B5C;
+        color: #DCD7C9;
     }
-}
-.active{
-    background-color: beige;
+    &.active{
+        background-color: #3F4E4F;
+        color: #DCD7C9;
+    }
 }

@@ -12,23 +12,31 @@ const CandidatesWrap = () => {
   );
 
   return (
-    <div className="candidatesWrap">
+    <table className="candidatesWrap">
+      <tbody>
+        <tr>
+          <th>Candidate</th>
+          <th>Birthday</th>
+          <th>Email</th>
+          <th>Education</th>
+        </tr>
       {filtered?.map((candidate) => {
         return (
-          <div className="candidateItem" key={candidate?.id}>
-            <img src={candidate?.avatar} alt="" />
-            <span>Candidate:{candidate?.name}</span>
-            <span>
-              Birthday:
+          <tr className="candidateItem" key={candidate?.id}>
+            
+            <td>{candidate?.name}<img src={candidate?.avatar} alt="" /></td>
+            <td>
+             
               {moment(candidate?.birthday).format("DD-MM-YYYY")}
-            </span>
-            <span>E-mail:{candidate?.email}</span>
-            <span>Education:{candidate?.education}</span>
-            <RemoveItem id={candidate?.id} />
-          </div>
+            </td>
+            <td>{candidate?.email}</td>
+            <td>{candidate?.education}</td>
+            <td><RemoveItem id={candidate?.id} /></td>
+          </tr>
         );
       })}
-    </div>
+      </tbody>
+    </table>
   );
 };
 

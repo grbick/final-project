@@ -73,9 +73,9 @@ const App = () => {
   // }
   function setInteresting(id){
     const company = companies?.find((company)=>user?.id===company.id)
-    fetch(`http://localhost:3333/api/companies?id=${company.id}`, {
+    fetch(`http://localhost:3333/api/companies`, {
             method: "PATCH",
-            body: JSON.stringify({
+            body: JSON.stringify({id:company.id,
               interesting:[...company.interesting,id]
             }),
             headers: {

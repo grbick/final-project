@@ -1,23 +1,20 @@
 .reportsWrap {
     width: 100%;
-    background-color: beige;
-    padding: 10px;
+    background-color: #DCD7C9;
+    padding: 50px;
     display: flex;
     justify-content: center;
     flex: 1;
     align-items: center;
     flex-wrap: wrap;
-}
-.reportItem{
-    border: 1px solid black;
-    padding-inline: 15px;
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    margin-block: 20px;
-    & > span{
-        border-right: 1px solid black;
-        display: inline;
-        width: 15%;
+    border-collapse: collapse;
+    & th{
+        font-weight: 500;
     }
+    & tr, th, td{
+    color: #2C3639;
+    border: 1px solid #2C3639;
+    padding: 5px;
 }
+}
+

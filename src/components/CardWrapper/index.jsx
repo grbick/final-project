@@ -10,6 +10,7 @@ const CardWrapper = () => {
   function filterCandidates(array){
     switch(sideFilter){
       case 'process':
+        //eslint-disable-next-line
         const passed = array?.filter((candidate) =>{
           const candidateReports = reports?.filter((report)=>candidate.id===report.candidateId&&report.companyId===user?.id)
           const checkReports = candidateReports.every((report)=>report.status==='passed')
@@ -19,6 +20,7 @@ const CardWrapper = () => {
         })
         return passed
       case 'declined':
+        //eslint-disable-next-line
         const declined = array?.filter((candidate) =>{
           const candidateReports = reports?.filter((report)=>candidate.id===report.candidateId&&report.companyId===user?.id)
           const checkReports = candidateReports.some((report)=>report.status === 'declined')
@@ -28,6 +30,7 @@ const CardWrapper = () => {
         })
         return declined
       case 'other':
+        //eslint-disable-next-line
         const other = array?.filter((candidate) =>{
           const candidateReports = reports?.filter((report)=>candidate.id===report.candidateId&&report.companyId===user?.id)
           if(candidateReports.length === 0){

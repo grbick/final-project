@@ -5,13 +5,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    & table, th, td {
+        border: 1.5px solid #8d99ae;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    & tr:nth-child(even) {
+        background-color: Lightgreen;
+    }
 }
 
-table, th, td {
-    border: 1.5px solid #8d99ae;
-    border-collapse: collapse;
-    text-align: center;
-}
-tr:nth-child(even) {
-    background-color: Lightgreen;
-}
+

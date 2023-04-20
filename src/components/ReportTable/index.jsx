@@ -15,12 +15,12 @@ const ReportTable = ({ id }) => {
   return (
     <table className="reportTable">
       <tbody>
+      {/* eslint-disable-next-line */}
         {filteredReports?.map((el) => {
           if (el.phase === "cv") {
             return (
               <tr key={'cv'}>
                 <td>CV</td>
-                <td>{el.phase}</td>
                 <td>{moment(el.interviewDate).format("DD-MM-YYYY")}</td>
                 <td>{el.status}</td>
                 <td>
@@ -32,7 +32,6 @@ const ReportTable = ({ id }) => {
             return (
               <tr key={'hr'}>
                 <td>HR</td>
-                <td>{el.phase}</td>
                 <td>{moment(el.interviewDate).format("DD-MM-YYYY")}</td>
                 <td>{el.status}</td>
                 <td>
@@ -44,7 +43,6 @@ const ReportTable = ({ id }) => {
             return (
               <tr key={'tech'}>
                 <td>Tech</td>
-                <td>{el.phase}</td>
                 <td>{moment(el.interviewDate).format("DD-MM-YYYY")}</td>
                 <td>{el.status}</td>
                 <td>
@@ -56,7 +54,6 @@ const ReportTable = ({ id }) => {
             return (
               <tr key={'final'}>
                 <td>Final</td>
-                <td>{el.phase}</td>
                 <td>{moment(el.interviewDate).format("DD-MM-YYYY")}</td>
                 <td>{el.status}</td>
                 <td>

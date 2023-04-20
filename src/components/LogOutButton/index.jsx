@@ -17,7 +17,7 @@ const LogOutButton = () => {
           setSideFilter(null)
         }}
       >
-        LogOutButton
+        LogOut
       </button>
     </div>
   );

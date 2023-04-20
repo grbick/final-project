@@ -9,7 +9,7 @@ const LogInPage = () => {
       <div className="hello-div">
         <img src="" alt="" />
         <p>Welcome to the AlphaAlpha Candidate Review Application!</p>
-        <p>Please log in to continue. &#8594; </p>
+        <div>Please log in to continue. <span>&#8594;</span> </div>
       </div>
       <div className="log-in-div">
         <label htmlFor="username">

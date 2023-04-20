@@ -9,7 +9,6 @@ const PersonInfo = ({ char }) => {
       <p>{moment(char?.birthday).format("DD-MM-YYYY")}</p>
       <p>{char?.email}</p>
       <p>{char?.education}</p>
-      {/* <p>char?.</p> */}
     </div>
   );
 };

@@ -1,9 +1,16 @@
 .dataSelector{
+    color: #DCD7C9;
     & > span{
-        border: 1px solid black;
-        padding: 2px;
+        border-right: 2px solid #A27B5C;
+        padding: 2px 5px;
+        margin-right: 5px; 
+        cursor: pointer;
+        &:last-of-type{
+            border: none;
+        }
+        &.selected{
+            color: #A27B5C;
+            cursor: default;
+        }
     }
-}
-.selected{
-    background-color: beige;
 }
