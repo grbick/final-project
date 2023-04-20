@@ -18,6 +18,7 @@ const CandidateProfilePage = () => {
     <div className="candidateProfilePage">
       {notes && <NotesModal />}
       <Header />
+        <p className="message4">"Goal setting is the secret to a compelling future.” — Tony Robbins</p>
       
         <div className="personDiv">
           <img src={`${clickedChar?.avatar}`} alt="" />
@@ -25,7 +26,6 @@ const CandidateProfilePage = () => {
           
         </div>
         <ReportTable id={clickedChar?.id}/>
-     
       <Footer />
     </div>
   );

@@ -11,6 +11,7 @@ const LandingMain = () => {
 
   return (
     <div className="landingMain">
+      <p className="message3">“I never dreamed about success. I worked for it.” —Estée Lauder</p>
       <div className="titleDiv">
         <FilterButton/>
         <h2>Candidates</h2>
