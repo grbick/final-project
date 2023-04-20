@@ -1,11 +1,13 @@
 .logInPage {
   height: 100vh;
   width: 100%;
-  display: flex;
+  display: grid;
+  text-align: center;
   justify-content: center;
+  flex-direction:inherit;
   align-items: center;
   gap: 20%;
-  background: linear-gradient(-45deg, #2C3639, #3F4E4F, #A27B5C, #DCD7C9);
+  background: linear-gradient(-45deg, #006d77, #4a4e69, #588157, #52796f);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   height: 100vh;
@@ -14,7 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #DCD7C9;
+    // background-color: #DCD7C9;
     padding: 20px;
     border-radius: 10px;
   }
@@ -33,15 +35,36 @@
   }
 }
 .hello-div{
+  justify-content: center;
+  display: flex;
+  order: 1;
+  color: whitesmoke;
+  // background: linear-gradient(45deg, #31572c, #3bceac, #A27B5C, #4f772d);
+  // background-size: 400% 400%;
+  // animation: gradient 6s ease infinite;
   & div{
     display: flex;
     justify-content: space-between;
     padding-right: 20%;
     align-items: center;
+
     & span{
       font-size: 1.6em;
     }
   }
+}
+
+.message {
+  display: inline;
+  color: whitesmoke;
+}
+
+.log-in-div{
+  order: 3;
+  color: whitesmoke;
+  // background: linear-gradient(45deg, #31572c, #3bceac, #A27B5C, #4f772d);
+  // background-size: 400% 400%;
+  // animation: gradient 6s ease infinite;
 }
 
 @keyframes gradient {

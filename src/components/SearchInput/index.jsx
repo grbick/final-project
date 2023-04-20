@@ -3,12 +3,10 @@ import "./searchInput.scss";
 import { applicationContext } from "../../context";
 
 
-const SearchInput = () => {
+const SearchInput = (e) => {
   const { inputValue, setInputValue} = useContext(applicationContext);
   return (
     <div className="searchInput">
-      SearchInput
-      
         <input type="text" name="" id="" placeholder="Search something..."
         onInput={(e)=>{setInputValue(e.target.value)}}
         value={inputValue}/>

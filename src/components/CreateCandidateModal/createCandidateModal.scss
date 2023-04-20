@@ -14,11 +14,13 @@
     align-items: center;
     gap: 30px;
     background-color: #DCD7C9;
+    border-radius: 7px;
     padding: 100px;
     & input{
         width: 200px;
         padding: 5px;
         margin-top: 5px;
+        border-radius: 3px;
     }
     & button{
         width: fit-content;

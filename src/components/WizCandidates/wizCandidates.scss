@@ -1,5 +1,6 @@
 .wizCandidates{
     width: 80%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -12,7 +13,7 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
-    margin: 2px;
+    margin: 10px;
     & img{
         width: 35px;
         height: 35px;

@@ -5,15 +5,17 @@
     display: flex;
     justify-content: center;
     flex: 1;
-    
     border-collapse: collapse;
     & th{
         font-weight: 500;
     }
     & tr, th, td{
-    color: #2C3639;
-    border: 1px solid #2C3639;
-    padding: 5px;
+        color: #2C3639;
+        padding: 5px;
+        border: 1.5px solid #8d99ae;
+        border-collapse: collapse;
+        text-align: center;
+        border-radius: 6px;
     & td:first-of-type{
         border: none;
         display: flex;

@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import "./adminPage.scss";
-
 import ReportsWrap from "../../components/ReportsWrap";
 import CompaniesWrap from "../../components/CompaniesWrap";
 import CandidatesWrap from "../../components/CandidatesWrap";
@@ -81,6 +80,7 @@ const AdminPage = () => {
         ) : (
           <CandidatesWrap />
         )}
+        <p className="message1">“When we strive to become better than we are, everything around us becomes better too.” — Paulo Coelho</p>
         <Footer />
         {createModal === "company" && <CreateCompanyModal />}
         {createModal === "candidate" && <CreateCandidateModal />}

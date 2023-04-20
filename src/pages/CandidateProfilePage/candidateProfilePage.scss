@@ -3,6 +3,7 @@
   min-height: 100vh;
   flex-direction: column;
   color: #2C3639;
+  background-color: #b6ad90;
 }
 
 .personDiv {
@@ -12,7 +13,9 @@
   margin: 30px auto;
   width: 80%;
   position: relative;
+  justify-content: space-evenly;
   align-items: center;
+  
   & > button {
     position: absolute;
     top: 50px;
@@ -28,7 +31,13 @@
 }
 
 .personDiv > img {
-  width: 30%;
-  height: 30%;
+  width: 34%;
+  height: 34%;
   padding: 20px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid #31572c;
+  border-radius: 25px;
+  box-shadow: 0 0 10px #31572c;
 }

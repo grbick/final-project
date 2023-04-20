@@ -1,18 +1,19 @@
 .reportTable {
-    padding: 3px;
     width: 75%;
-    height: 200px;
+    height: 120px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    // background-color: #dde5b6;
+    border-radius: 6px;
     & table, th, td {
         border: 1.5px solid #8d99ae;
         border-collapse: collapse;
         text-align: center;
+        border-radius: 6px;
+        background-color: #dde5b6;
     }
-    & tr:nth-child(even) {
-        background-color: Lightgreen;
-    }
+
 }
 
 

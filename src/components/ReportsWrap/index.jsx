@@ -23,7 +23,7 @@ const ReportsWrap = () => {
           <th>Date</th>
           <th>Phase</th>
           <th>Status</th>
-          <th></th>
+          <th>+</th>
         </tr>
       {filtered?.map((report) => {
         return (

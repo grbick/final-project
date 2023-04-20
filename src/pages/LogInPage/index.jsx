@@ -5,12 +5,13 @@ import { applicationContext } from "../../context";
 const LogInPage = () => {
   const { body,setBody,logIn,setUser,users,failed, setCompanyID,} = useContext(applicationContext);
   return (
-    <div className="logInPage">
+    <div className="logInPage"> 
       <div className="hello-div">
         <img src="" alt="" />
-        <p>Welcome to the AlphaAlpha Candidate Review Application!</p>
-        <div>Please log in to continue. <span>&#8594;</span> </div>
+        <h2>Welcome to the AlphaAlpha Candidate Review Application!</h2>
+        <p>Please log in below to continue. </p>
       </div>
+      <div className="message">“I’m a greater believer in luck, and I find the harder I work the more I have of it.” — Thomas Jefferson</div>
       <div className="log-in-div">
         <label htmlFor="username">
           <p>Email:</p>
@@ -25,12 +26,12 @@ const LogInPage = () => {
               )
                 ? users.find((element) => element.email === e.target.value)
                 : "";
-              sessionStorage.setItem("user", JSON.stringify(user));
-              setUser(JSON.parse(sessionStorage.getItem("user")));
-              setCompanyID(user?.id)
-            }}
-            value={body.email}
-          />
+                sessionStorage.setItem("user", JSON.stringify(user));
+                setUser(JSON.parse(sessionStorage.getItem("user")));
+                setCompanyID(user?.id)
+              }}
+              value={body.email}
+              />
         </label>
         <label htmlFor="username">
           <p>Password:</p>
@@ -45,10 +46,11 @@ const LogInPage = () => {
               if (e.key === "Enter") logIn();
             }}
             value={body.password}
-          />
+            />
         </label>
         <div className="invalid-input">{failed && <p>Wrong input!</p>}</div>
         <button onClick={logIn}>Log in</button>
+            <p>Just make Your first move, we will do the rest! </p>
       </div>
     </div>
   );
