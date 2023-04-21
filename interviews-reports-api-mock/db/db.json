@@ -697,7 +697,7 @@
     },
     {
       "email": "office@google.com",
-      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "password": "$2a$04$3oONx.xjCX1LowYcScz34u/s//vRcVdLUASPtSXncQoKpfTEAvqua",
       "name": "Google",
       "surname": "Googlic",
       "age": 404,
@@ -706,7 +706,7 @@
     },
     {
       "email": "office@facebook.com",
-      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "password": "$2a$04$kgh4cJ94yhZVTd2Q/4Ab8Osutjkplc6x514AW5NhyaK7HrDsICgMa",
       "name": "Facebook",
       "surname": "Fejsbukic",
       "age": 404,
@@ -715,7 +715,7 @@
     },
     {
       "email": "office@alphabet.com",
-      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "password": "$2a$04$ZT3/NcS7JsSK8u0OUOsCIeANEC3Cxx3TGYKgZalVUvQANuej4xnpW",
       "name": "Alphabet",
       "surname": "Alphabetic",
       "age": 404,
@@ -724,7 +724,7 @@
     },
     {
       "email": "office@outlook.com",
-      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "password": "$2a$04$Op1csrvv4Wmfnbk2Uko8zOr6fa3kP4/fQ7xgQGNkHmf7Z0O/23Ecu",
       "name": "Microsoft",
       "surname": "Microsoftic",
       "age": 404,
@@ -733,7 +733,7 @@
     },
     {
       "email": "office@tesla.com",
-      "password": "$2a$10$Ht9ATCnB3LhyEpPg.c/GOuLzkMYD2WRPZ3ZtFVP.uVCrx.nW/rwVq",
+      "password": "$2a$04$55xr/Mp5sMontcle3F6hc.dM8xQV1T2AyeLHbHooHabjVkQGmPBW.",
       "name": "Tesla",
       "surname": "Nikola",
       "age": 404,

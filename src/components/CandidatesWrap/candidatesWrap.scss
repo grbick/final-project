@@ -2,11 +2,11 @@
     width: 100%;
     background-color: #DCD7C9;
     padding: 50px;
-    display: flex;
-    justify-content: center;
-    flex: 1;
     
-    border-collapse: collapse;
+    flex: 1;
+    & table{
+        border-collapse: collapse;
+    }
     & th{
         font-weight: 500;
     }
@@ -14,16 +14,12 @@
     color: #2C3639;
     border: 1px solid #2C3639;
     padding: 5px;
-    & td:first-of-type{
-        border: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        & img{
-            height: 30px;
-            width: 30px;
-        }
-    }
+    // & td:first-of-type{
+    //     border: none;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    // }
     
 }
 }

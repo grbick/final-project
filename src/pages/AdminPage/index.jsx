@@ -23,6 +23,7 @@ const AdminPage = () => {
     interesting:[]
   });
   const [newCandidate, setNewCandidate] = useState({
+
     name: "",
     birthday: "",
     email: "",
@@ -30,7 +31,10 @@ const AdminPage = () => {
     avatar:
       "https://cdn.pixabay.com/photo/2016/08/31/11/54/icon-1633249_960_720.png",
   });
-
+  const [sort,setSort] = useState({
+    company: '',
+    candidate: ''
+  })
   function submitCompany() {
     fetch("http://localhost:3333/api/companies", {
       method: "POST",
@@ -69,6 +73,8 @@ const AdminPage = () => {
         newCandidate,
         setNewCandidate,
         submitCandidate,
+        sort,
+        setSort
       }}
     >
       <div className="adminPage">

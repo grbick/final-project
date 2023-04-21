@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import "./companiesWrap.scss";
 import RemoveItem from "../RemoveItem";
-import { applicationContext } from "../../context";
+import { applicationContext,adminContext } from "../../context";
+import SortingButton from "../SortingButton";
 
 const CompaniesWrap = () => {
   const { inputValue, companies } = useContext(applicationContext);
+  const {sort,setSort} = useContext(adminContext)
 
   const filtered = companies?.filter((company) =>
     company.name.toLowerCase().includes(inputValue)
@@ -13,7 +15,11 @@ const CompaniesWrap = () => {
     <table className="companiesWrap">
       <tbody>
         <tr>
-          <th>Company</th>
+        <th>Company <SortingButton
+           sortToggle={()=>{
+            sort.company === 'descending' ? setSort({ company: 'ascending', candidate: '' }) 
+           : sort.company === 'ascending'? setSort({ company: 'descending', candidate: '' }) : setSort({ company: 'descending', candidate: '' })}}
+           sortContent={sort.company === 'descending' ?<>&#8593;</>:<>&#8595;</>}/></th>
           <th>Email</th>
         </tr>
       {filtered?.map((company) => {

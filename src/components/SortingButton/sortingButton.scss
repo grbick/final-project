@@ -1,0 +1,9 @@
+.sortingButton{
+    display: inline-block;
+    & button{
+        background-color: transparent;
+        color: #2C3639;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+}
