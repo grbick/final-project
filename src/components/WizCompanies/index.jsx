@@ -26,7 +26,7 @@ const WizCompanies = () => {
               setSelectedCompany(company);
               setNewReport({
                 ...newReport,
-                companyID: company.id,
+                companyId: company.id,
                 companyName: company?.name,
               });
             }}

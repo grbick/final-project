@@ -26,7 +26,7 @@ const WizCandidates = () => {
               setSelectedCandidate(candidate);
               setNewReport({
                 ...newReport,
-                candidateID: candidate.id,
+                candidateId: candidate.id,
                 candidateName: candidate?.name,
               });
             }}

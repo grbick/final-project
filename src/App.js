@@ -71,31 +71,33 @@ const App = () => {
   //   console.log(company);
   //   return company?[0].interesting.find(candidateID);
   // }
-  function setInteresting(id){
-    const company = companies?.find((company)=>user?.id===company.id)
-    fetch(`http://localhost:3333/api/companies`, {
-            method: "PATCH",
-            body: JSON.stringify({id:company.id,
-              interesting:[...company.interesting,id]
-            }),
-            headers: {
-               "Content-Type": "application/json",
-              Accept: "*/*",
-             Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
-           },
-           })
+  function setInteresting(id) {
+    const company = companies?.find((company) => user?.id === company.id)
+    fetch(`http://localhost:3333/api/companies/${company?.id}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        interesting: [...company.interesting, id]
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "*/*",
+        Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
+      },
+    })
   }
-  function removeInteresting(id){
-    const company = companies?.find((company)=>user?.id===company.id)
-    fetch("http://localhost:3333/api/companies", {
-            method: "PUT",
-            body: JSON.stringify(company.interesting.filter((e)=>e!==id)),
-            headers: {
-               "Content-Type": "application/json",
-              Accept: "*/*",
-             Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
-           },
-           });
+  function removeInteresting(id) {
+    const company = companies?.find((company) => user?.id === company.id)
+    fetch(`http://localhost:3333/api/companies/${company?.id}`, {
+      method: "DELETE",
+      body: JSON.stringify({
+        interesting: [...company.interesting, id]
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "*/*",
+        Authorization: `Bearer ${sessionStorage.getItem("accessToken")}`,
+      },
+    });
   }
 
   function logIn() {
